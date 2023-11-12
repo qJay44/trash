@@ -1,0 +1,13 @@
+BackgroundClick(x, y, messageDelay, PID) {
+
+lParam := x | (y << 16)
+
+SendMessage, 0x006, 00000002, 00000000, , ahk_pid %PID% ;ACTIVE
+PostMessage, 0x200, 00000001, %lParam%, , ahk_pid %PID% ;MOUSEMOVE
+
+PostMessage, 0x201, 0x00120BD6, 0x01D80041, , ahk_pid %PID% ;LBUTTONDOWN
+Sleep, %messageDelay%
+PostMessage, 0x202, 0x00120BD6, 0x01D80041, , ahk_pid %PID% ;LBUTTONUP
+
+return
+}
