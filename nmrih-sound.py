@@ -1,15 +1,41 @@
+# NOTE:
+# - Vanila folder extracted manually
+# - The new vpk file should be loaded after all other plugins that uses sounds in addon.txt
+
 import os
 import subprocess
 import vpk
 import pathlib
+from sys import argv
 
 VANILA_SOUNDS_FOLDER = 'vpk-nmrih\\original\\firearms'
 ADDON_SOUNDS_FOLDER = 'C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\224260'
 NEW_SOUNDS_ROOT = 'vpk-nmrih\\root'
-VOLUME_VALUE = 0.2
+CUSTOM_VALUES = {
+    'sks_fire_01.wav': 0.05,
+    'glock_fire_01.wav': 0.1
+}
 
 
-def deacreaseOriginalSounds():
+def main():
+    volumeValue = 0.3
+    if (len(argv) == 2):
+        try:
+            volumeValue = max(min(float(argv[1]), 1.0), 0.0)
+        except ValueError:
+            pass
+
+    handleVanillaSounds(volumeValue)
+    handleAddonSounds(volumeValue)
+
+    # Create and copy new vpk to the addons foler
+    newPakName = 'firearms-decreased-volume-sounds.vpk'
+    newPak = vpk.new(NEW_SOUNDS_ROOT)
+    newPak.save('vpk-nmrih\\' + newPakName)
+    os.system(f'cp "vpk-nmrih\{newPakName}" "C:\\Program Files (x86)\\Steam\\steamapps\\common\\nmrih\\nmrih\\custom\{newPakName}"')
+
+
+def handleVanillaSounds(volumeValue):
     dirsPath = [os.path.join(VANILA_SOUNDS_FOLDER, name) for name in os.listdir(VANILA_SOUNDS_FOLDER)]
 
     for folderPath in dirsPath:
@@ -21,13 +47,13 @@ def deacreaseOriginalSounds():
                     [
                         'ffmpeg', '-hide_banner', '-y',
                         '-i', f'{folderPath}\{file}',
-                        '-filter:a', f'volume={VOLUME_VALUE}',
+                        '-filter:a', f'volume={CUSTOM_VALUES[file] if file in CUSTOM_VALUES.keys() else volumeValue}',
                         f'{newFilePath}\{file}'
                     ]
                 )
 
 
-def deacreaseAddonSounds():
+def handleAddonSounds(volumeValue):
     dirsPath = [os.path.join(ADDON_SOUNDS_FOLDER, name) for name in os.listdir(ADDON_SOUNDS_FOLDER)]
 
     for folderPath in dirsPath:
@@ -49,16 +75,12 @@ def deacreaseAddonSounds():
                                 [
                                     'ffmpeg', '-hide_banner', '-y',
                                     '-i', tempFile,
-                                    '-filter:a', f'volume={VOLUME_VALUE}',
+                                    '-filter:a', f'volume={volumeValue}',
                                     tempFile.replace('_temp', '')
                                 ]
                             )
                             os.remove(tempFile)
 
-    newPak = vpk.new(NEW_SOUNDS_ROOT)
-    newPak.save('vpk-nmrih/firearms-decreased-volume-sounds.vpk')
 
-
-# deacreaseOriginalSounds()
-deacreaseAddonSounds()
+main()
 
