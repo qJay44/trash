@@ -1,0 +1,1 @@
+for %%i in (*.mp4) do "ffmpeg" -i "%%~fi" -vn -c:a copy "%%~ni.m4a"

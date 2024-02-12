@@ -5,19 +5,24 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 SetKeyDelay, 500
 
-F3::
+#IfWinActive ahk_exe nmrih.exe
+#MaxThreadsPerHotkey 2
+*XButton1::
 {
-	Reload
+	toggle := !toggle
+	Send, {Ctrl down}
+	While (toggle and WinActive("ahk_exe nmrih.exe"))
+	{
+		Send, {Blind}{Space}
+		Send, {Blind}{e}
+	}
+	Send, {Ctrl up}
+	Return
 }
 
 #IfWinActive ahk_exe nmrih.exe
-#MaxThreadsPerHotkey 2
-XButton1::
+*Numpad6::
 {
-	toggle := !toggle
-	while (toggle and WinActive("ahk_exe nmrih.exe"))
-	{
-		Send, {space}
-		Send, {e}
-	}
+	Send, {Blind}{LShift down}
+	Return	
 }
