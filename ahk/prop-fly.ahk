@@ -20,9 +20,3 @@ SetKeyDelay, 500
 	Return
 }
 
-#IfWinActive ahk_exe nmrih.exe
-*Numpad6::
-{
-	Send, {Blind}{LShift down}
-	Return	
-}
