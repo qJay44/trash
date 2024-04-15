@@ -9,7 +9,7 @@ import pathlib
 from sys import argv
 from shutil import copy
 
-VANILA_SOUNDS_FOLDER = 'vpk-nmrih\\original\\firearms'
+VANILA_SOUNDS_FOLDER = 'vpk-nmrih\\original'
 ADDON_SOUNDS_FOLDER = 'C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\content\\224260'
 NEW_SOUNDS_ROOT = 'vpk-nmrih\\root'
 CUSTOM_VALUES = {
@@ -24,7 +24,9 @@ def main():
         try:
             volumeValue = max(min(float(argv[1]), 1.0), 0.0)
         except ValueError:
-            pass
+            print(f'Invalid given value ({argv[1]})')
+
+    print(f'Volume value: {volumeValue}')
 
     handleVanillaSounds(volumeValue)
     handleAddonSounds(volumeValue)
@@ -33,17 +35,18 @@ def main():
     newPakName = 'firearms-decreased-volume-sounds.vpk'
     newPak = vpk.new(NEW_SOUNDS_ROOT)
     newPak.save('vpk-nmrih\\' + newPakName)
-    copy(f"vpk-nmrih/{newPakName}", f"C:\\Program Files (x86)\\Steam\\steamapps\\common\\nmrih\\nmrih\\custom/{newPakName}")
+    copy(f'vpk-nmrih/{newPakName}', f'C:\\Program Files (x86)\\Steam\\steamapps\\common\\nmrih\\nmrih\\custom/{newPakName}')
 
 
 def handleVanillaSounds(volumeValue):
-    dirsPath = [os.path.join(VANILA_SOUNDS_FOLDER, name) for name in os.listdir(VANILA_SOUNDS_FOLDER)]
+    firearmsDir = VANILA_SOUNDS_FOLDER + '\\weapons\\firearms'
+    dirsPath = [os.path.join(firearmsDir, name) for name in os.listdir(firearmsDir)]
 
     i = 1
     for folderPath in dirsPath:
         for file in os.listdir(folderPath):
             if 'fire' in file and not 'dryfire' in file:
-                newFilePath = f'{NEW_SOUNDS_ROOT}\\sound\\weapons\\firearms/{folderPath.split(VANILA_SOUNDS_FOLDER)[1]}'
+                newFilePath = f'{NEW_SOUNDS_ROOT}\\sound\\weapons\\firearms/{folderPath.split(firearmsDir)[1]}'
                 os.makedirs(newFilePath, exist_ok=True)
                 subprocess.call(
                     [
@@ -55,6 +58,22 @@ def handleVanillaSounds(volumeValue):
                 )
                 print('Vanila soudns handled: ', i, sep='', end='\r', flush=True)
                 i += 1
+
+    headpopDir = VANILA_SOUNDS_FOLDER + '\\physics\\flesh'
+
+    for file in os.listdir(headpopDir):
+        newFilePath = f'{NEW_SOUNDS_ROOT}\\sound\\physics\\flesh/{file}'
+        subprocess.call(
+            [
+                'ffmpeg', '-hide_banner', '-y', '-loglevel', 'error',
+                '-i', f'{headpopDir}/{file}',
+                '-filter:a', f'volume={volumeValue}',
+                newFilePath
+            ]
+        )
+        print('Vanila soudns handled: ', i, sep='', end='\r', flush=True)
+        i += 1
+
     print()
 
 
