@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         New Userscript
+// @name         Steam Workshop calcuate collection size
 // @namespace    http://tampermonkey.net/
 // @version      2024-04-29
 // @description  try to take over the world!
@@ -9,58 +9,35 @@
 // @grant        none
 // ==/UserScript==
 
-let itemsFinished = 0
 let total = 0
-
-async function getSize(url) {
-    await fetch(url)
-        .then((response) => response.text())
-        .then(function(html) {
-            // Convert the HTML string into a document object
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(html, 'text/html');
-            const fileSizeDetails = doc.getElementsByClassName('detailsStatRight')[0].innerHTML.split(' ') // 0 - number, 1 - type
-
-            let size = parseFloat(fileSizeDetails[0]); // Bytes
-            switch (fileSizeDetails[1]) {
-                case 'b':
-                    size /= 8
-                    break
-                case 'B':
-                    break
-                case 'KB':
-                    size *= 1000
-                    break
-                case 'MB':
-                    size *= 1e6
-                    break
-                case 'GB':
-                    size *= 1e9
-                    break
-                default:
-                    console.log(`default case (${fileSizeDetails[0]}, ${fileSizeDetails[1]}, ${url})`)
-                    break;
-            }
-            total += size
-        }).catch((err) => console.warn('Something went wrong.', err));
-}
 
 async function sumSizes() {
     const divCollection = document.getElementsByClassName('collectionChildren')[0]
     const divItems = divCollection.getElementsByClassName('collectionItem')
     const count = divItems.length
+    let data = {'itemcount': count}
 
-    for (const item of Array.from(divItems)) {
-        const url = item.getElementsByClassName('workshopItem')[0].children[0].href
-        await getSize(url)
-        if (++itemsFinished % 100 == 0) console.log(`calculation size progress: ${itemsFinished}/${count}`)
-    };
+    for (let i = 0; i < count; i++) {
+        data[`publishedfileids[${i}]`] = divItems[i].id.split('sharedfile_')[1]
+    }
+
+    await fetch('https://api.steampowered.com/ISteamRemoteStorage/GetPublishedFileDetails/v1/', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: data
+    })
+        .then((response) => response.json())
+        .then(function(json) {
+            for (const item of Array.from(json.response.items)) {
+                total += item.file_size
+            }
+        }).catch((err) => console.warn('Something went wrong.', err));
 }
 
 (function() {
     'use strict';
     sumSizes().then(function() {
-        if (itemsFinished) {
+        if (total) {
             const gb = total / 1e9
             const mb = gb * 1000
             const kb = mb * 1000
