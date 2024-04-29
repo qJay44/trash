@@ -13,7 +13,7 @@ def getCollectionDetails(id):
     url = 'https://api.steampowered.com/ISteamRemoteStorage/GetCollectionDetails/v1/'
     body = {'collectioncount': 1, 'publishedfileids[0]': id}
 
-    return dict(post(url, body).json())['response']['collectiondetails'][0]['children']
+    return post(url, body).json()['response']['collectiondetails'][0]['children']
 
 
 def getPublishedFileDetails(collection):
@@ -22,7 +22,7 @@ def getPublishedFileDetails(collection):
     for i, item in enumerate(collection):
         body[f'publishedfileids[{i}]'] = item['publishedfileid']
 
-    return dict(post(url, body).json())['response']['publishedfiledetails']
+    return post(url, body).json()['response']['publishedfiledetails']
 
 
 def showTotalSize(items):
