@@ -4,6 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 from rich.default_styles import DEFAULT_STYLES
 from rich.style import Style
+from sys import platform
 
 # The only way to change styles of some columns without modifying (within) the library
 DEFAULT_STYLES["progress.download"] = Style(color="cyan3")
@@ -29,7 +30,16 @@ class Downloader:
     ]
 
     def __init__(self, path: str, gameVersion: float) -> None:
-        with open(f"{os.getenv('APPDATA')}\\Factorio\\player-data.json", "r", encoding="utf-8") as f:
+        playerDataJsonPath = ""
+        if platform == "win32":
+            playerDataJsonPath = f"{os.getenv('APPDATA')}\\Factorio\\player-data.json"
+        elif platform == "linux":
+            playerDataJsonPath = f"/home/{os.environ.get("USER")}/.local/share/Steam/userdata/166517806/427520/remote/player-data.json"
+        else:
+            print("Unsupported platform")
+            exit(1)
+
+        with open(playerDataJsonPath, encoding="utf-8") as f:
             playerDataJson = json.load(f) # Get player's token and username
             self._data = dict()
             self._data["username"] = playerDataJson["service-username"]
@@ -45,8 +55,9 @@ class Downloader:
             self._download(mod)
         print("Done")
 
-    # FIXME: Some mods can already be found by API, so it would be better to do that first
-    # to cut down search count on the webpage since it takes quite a while to get
+    # FIXME: Some mods names can match their ids which means they can already be found
+    # by API, would be better to do that first to cut down search count
+    # on the webpage since it takes quite a while to get
     # a response from the request this way
     def _find(self) -> list[str]:
         """Get mods ids from a first result on the search webpage"""
@@ -55,7 +66,13 @@ class Downloader:
         with open(self._data["modsFile"], "r") as f:
             names = f.read().splitlines()
             for i, name in enumerate(names, start=1):
-                print('Searching the mods... ', f"{i}/{len(names)}", sep='', end='\r', flush=True)
+                # If having an url
+                splitted = name.split("https://mods.factorio.com/mod/")
+                if (len(splitted) == 2):
+                    ids.append(splitted[1])
+                    continue
+
+                print("Searching the mods... ", f"{i}/{len(names)}", sep='', end='\r', flush=True)
                 params = {"query": name, "exclude_category": "internal", "factorio_version": str(self._data["version"]), "sort_attribute": "relevancy"}
                 response = requests.get("https://mods.factorio.com/search", params)
                 soup = BeautifulSoup(response.text, 'lxml')
@@ -64,7 +81,7 @@ class Downloader:
                     notFound.append(name)
                 else:
                     ids.append(match["href"].split("/mod/")[1].split("?")[0]) # type: ignore
-            print()
+            print(f"Searching the mods... {i}/{len(names)}")
 
         if len(notFound):
             print(f"Didn't found these mods: {notFound}")
@@ -84,7 +101,7 @@ class Downloader:
             if response.status_code == 200:
                 results = response.json()["results"]
                 for result in results:
-                    for release in result["releases"]:
+                    for release in reversed(result["releases"]):
                         if float(release["info_json"]["factorio_version"]) == self._data["version"]:
                             mods.append({"file_name": release["file_name"], "download_url": release["download_url"]})
                             break
@@ -121,6 +138,6 @@ class Downloader:
 
 
 if __name__ == "__main__":
-    dl = Downloader("fmods.txt", 1.1)
+    dl = Downloader("fmods3.txt", 1.1)
     dl.execute()
 
