@@ -1,9 +1,7 @@
 import re
 import requests
 import os
-import browser_cookie3
 from sys import argv
-
 from rich.default_styles import DEFAULT_STYLES
 from rich.style import Style
 
@@ -14,6 +12,8 @@ DEFAULT_STYLES["progress.data.speed"] = Style(color="pink3")
 # This package uses "DEFAULT_STYLES" so have to import it after the changes
 from rich.progress import BarColumn, DownloadColumn, Progress, TextColumn, TransferSpeedColumn # type: ignore # noqa: E402
 
+dlProgress = 1
+dlProgressTarget = 1
 progressBarColumns= [
     TextColumn("[cyan][progress.description]{task.description}"),
     BarColumn(),
@@ -23,16 +23,24 @@ progressBarColumns= [
 
 
 def main():
-    if (len(argv) == 3):
-        client = {
-            'id': argv[1],
-            'secret': argv[2],
-        }
+    global dlProgressTarget
 
-        for b in getBeatmaps(getToken(client)):
-            download(b)
-    else:
+    if (len(argv) != 3):
         print(f'Wrong arguments(ex.: {argv[0]} "client_id" "client_secret")')
+        exit(1)
+
+    client = {
+        'id': argv[1],
+        'secret': argv[2],
+    }
+
+    beatmaps = getBeatmaps(getToken(client))
+    dlProgressTarget = len(beatmaps)
+
+    for b in beatmaps:
+        download(b)
+
+    print(f'Done [{dlProgress}/{dlProgressTarget}]')
 
 
 def getToken(client):
@@ -65,8 +73,6 @@ def getBeatmaps(token):
     }
 
     for i, c in enumerate(checksums, start=1):
-        if i == 4:
-            break
         print('Getting download urls... ', f"{i}/{len(checksums)}", sep='', end='\r', flush=True)
         response = requests.get(url=url, params={'checksum': c}, headers=headers)
 
@@ -87,27 +93,28 @@ def getBeatmaps(token):
 
 
 def download(beatmap):
+    global dlProgress, dlProgressTarget
+
     if not os.path.exists('beatmaps'):
         os.mkdir('beatmaps')
 
     name = f'{beatmap['id']} {beatmap['artist']} - {beatmap['title']}.osz'
-    url = f'https://osu.ppy.sh/beatmapsets/{beatmap['id']}/download'
-    params = {'noVideo': 1}
-    cookies = browser_cookie3.chrome(domain_name='osu.ppy.sh')
 
+    # TODO: encoded names
     if not os.path.exists('beatmaps/' + name):
-        with requests.get(url=url, params=params, cookies=cookies, stream=True, timeout=3) as r:
+        with requests.get(f'https://catboy.best/d/{beatmap['id']}', stream=True) as r:
             r.raise_for_status()
             size = int(r.headers['Content-Length'])
             chunkSize = 8192
             with open('beatmaps/' + name, 'wb') as f:
-                with Progress(progressBarColumns) as progress:
-                    task = progress.add_task(name, total=size)
+                with Progress(*progressBarColumns) as progress:
+                    task = progress.add_task(f'[{dlProgress}/{dlProgressTarget}] {name}', total=size)
                     for chunk in r.iter_content(chunk_size=chunkSize):
                         if chunk:
                             f.write(chunk)
                             progress.update(task, advance=chunkSize)
                     progress.update(task, completed=size)
+    dlProgress += 1
 
 
 main()
