@@ -1,6 +1,9 @@
 import re
 import requests
 import os
+import aiohttp
+import asyncio
+from validate_filename import validate
 from sys import argv
 from rich.default_styles import DEFAULT_STYLES
 from rich.style import Style
@@ -12,6 +15,9 @@ DEFAULT_STYLES["progress.data.speed"] = Style(color="pink3")
 # This package uses "DEFAULT_STYLES" so have to import it after the changes
 from rich.progress import BarColumn, DownloadColumn, Progress, TextColumn, TransferSpeedColumn # type: ignore # noqa: E402
 
+notFound = []
+gatherProgress = 0
+gatherProgressTarget = 0
 dlProgress = 1
 dlProgressTarget = 1
 progressBarColumns= [
@@ -22,7 +28,7 @@ progressBarColumns= [
 ]
 
 
-def main():
+async def main():
     global dlProgressTarget
 
     if (len(argv) != 3):
@@ -34,11 +40,15 @@ def main():
         'secret': argv[2],
     }
 
-    beatmaps = getBeatmaps(getToken(client))
+    async with aiohttp.ClientSession() as session:
+        beatmaps = await getBeatmaps(session, getToken(client))
+
     dlProgressTarget = len(beatmaps)
 
+    print('Downloading beatmaps...')
     for b in beatmaps:
-        download(b)
+        if b:
+            download(b)
 
     print(f'Done [{dlProgress}/{dlProgressTarget}]')
 
@@ -59,12 +69,30 @@ def getToken(client):
     exit(1)
 
 
-def getBeatmaps(token):
+async def getBeatmap(session, **kwargs):
+    global notFound, gatherProgress, gatherProgressTarget
+    async with session.get(url=kwargs['url'], params=kwargs['params'], headers=kwargs['headers']) as response:
+        if response.status == 200:
+            data = await response.json()
+            return {
+                'id': data['beatmapset_id'],
+                'artist': data['beatmapset']['artist'],
+                'title': data['beatmapset']['title']
+            }
+
+        notFound.append(kwargs['params']['checksum'])
+
+        gatherProgress += 1
+        print('Getting beatmap urls... ', f"[{gatherProgress}/{gatherProgressTarget}]", sep='', end='\r', flush=True)
+
+        return False
+
+
+async def getBeatmaps(session, token):
+    global notFound, gatherProgressTarget
     with open('collection.db', 'r') as f:
         checksums = re.findall(r'(?:[a-z]|\d){32}', f.read())
 
-    beatmaps = []
-    notFound = 0
     url = 'https://osu.ppy.sh/api/v2/beatmaps/lookup'
     headers = {
         'Authorization': 'Bearer ' + token,
@@ -72,22 +100,22 @@ def getBeatmaps(token):
         'Content-Type': 'application/json'
     }
 
-    for i, c in enumerate(checksums, start=1):
-        print('Getting download urls... ', f"{i}/{len(checksums)}", sep='', end='\r', flush=True)
-        response = requests.get(url=url, params={'checksum': c}, headers=headers)
+    tasks = []
+    for c in checksums:
+        #response = requests.get(url=url, params={'checksum': c}, headers=headers)
+        task = asyncio.create_task(getBeatmap(session, url=url, params={'checksum': c}, headers=headers))
+        tasks.append(task)
 
-        if response.status_code == 200:
-            data = response.json()
-            beatmaps.append({
-                'id': data['beatmapset_id'],
-                'artist': data['beatmapset']['artist'],
-                'title': data['beatmapset']['title'],
-            })
-        else:
-            notFound += 1
+    gatherProgressTarget = len(checksums)
+    beatmaps = await asyncio.gather(*tasks)
 
+    print('Getting beatmap urls... ', f"[{gatherProgress}/{gatherProgressTarget}]", sep='', end='\r', flush=True)
     print()
-    print(f'Not found maps: {notFound}')
+    print(f'Not found maps: {len(notFound)}')
+
+    if notFound:
+        with open('temp_osuNotFound.txt', 'w') as f:
+            f.write('\n'.join(notFound))
 
     return beatmaps
 
@@ -98,17 +126,16 @@ def download(beatmap):
     if not os.path.exists('beatmaps'):
         os.mkdir('beatmaps')
 
-    name = f'{beatmap['id']} {beatmap['artist']} - {beatmap['title']}.osz'
+    filename = validate(f'{beatmap['id']} {beatmap['artist']} - {beatmap['title']}.osz')
 
-    # TODO: encoded names
-    if not os.path.exists('beatmaps/' + name):
+    if not os.path.exists(f'{os.getenv('LOCALAPPDATA')}/osu!/Songs/{filename}') and not os.path.exists('beatmaps/' + filename):
         with requests.get(f'https://catboy.best/d/{beatmap['id']}', stream=True) as r:
             r.raise_for_status()
             size = int(r.headers['Content-Length'])
             chunkSize = 8192
-            with open('beatmaps/' + name, 'wb') as f:
+            with open('beatmaps/' + filename, 'wb') as f:
                 with Progress(*progressBarColumns) as progress:
-                    task = progress.add_task(f'[{dlProgress}/{dlProgressTarget}] {name}', total=size)
+                    task = progress.add_task(f'[{dlProgress}/{dlProgressTarget}] {filename}', total=size)
                     for chunk in r.iter_content(chunk_size=chunkSize):
                         if chunk:
                             f.write(chunk)
@@ -117,5 +144,5 @@ def download(beatmap):
     dlProgress += 1
 
 
-main()
+asyncio.run(main())
 
