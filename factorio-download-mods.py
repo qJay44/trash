@@ -113,9 +113,9 @@ class Downloader:
                 with open(f"mods/{modName}", "wb") as f:
                     with Progress(*self._progressBarColumns) as progress:
                         task = progress.add_task(modName, total=size)
-                        for chunck in r.iter_content(chunk_size=chunk_size):
-                            if chunck:
-                                f.write(chunck)
+                        for chunk in r.iter_content(chunk_size=chunk_size):
+                            if chunk:
+                                f.write(chunk)
                                 progress.update(task, advance=chunk_size)
                         progress.update(task, completed=size)
 
