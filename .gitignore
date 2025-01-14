@@ -1,5 +1,6 @@
 vpk-nmrih/
 __pycache__/
+.mypy_cache/
 mods/
 beatmaps/
 venv/

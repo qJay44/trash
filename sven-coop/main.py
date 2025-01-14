@@ -2,53 +2,46 @@ from os import scandir
 from random import choice, randint
 from config import *
 import json
+import requests
 
 
-def fromWords(f):
-    words = f.read().split(" ")
+def chooseSound():
+    response = requests.get("https://kingsc.net/ChatSounds.txt")
+    if response.status_code != 200:
+        print("Bad response")
 
-    return choice(words)
+    lines = [line.split('\t')[1].split(' ')[0] for line in response.text.splitlines()[3:]]
 
-
-def fromChars(f):
-    text = f.read()
-    chars = [choice(text) for _ in range(1, randint(1, 25))]
-
-    return "".join(chars)
+    return choice(lines)
 
 
-def fromSounds():
-    # Folders will be also here but idc
-    soundFiles = [
-        *scandir(TWLZ_SOUND_PATH),
-        *scandir(TWLZ_SOUND_PATH + "\plugins"),
-        *scandir(TWLZ_SOUND_PATH + "\stolen")
-    ]
+def chooseHat():
+    hats = ['afro', 'angel2', 'angelhead', 'anticross', 'arrow autism', 'aviators', 'azusa_big', 'baron_bunny_new', \
+            'beerhat beret', 'booptail', 'camohat', 'cathead', 'cattail chef', 'clocknecklace', 'clown_wig', \
+            'collar_pink', 'cophat cowboy', 'cross', 'crown', 'deal_with_it', 'devil2 devilhead', 'deviltail', \
+            'devilwing', 'elf', 'fag fox_hat', 'fox_hat _b', 'gasmask_wh', 'goldhead', 'headcrab headphones', \
+            'hood', 'inosuke', 'jamacahat2', 'jotaro_hat kermit_cap', 'kfcbucket', 'magic', 'mask', 'mic_chan padoru', \
+            'pandahead' , 'paperbag', 'pighead', 'pigtail pirate2', 'pyramidhead_new', 'randoseru', 'randoseru_padoru', \
+            'randoseru_s ricefarmer', 'santahat', 'santahat2', 'shades', 'stahlhelm sumb raro2', 'tank', 'tophat', 'tutu', \
+            'tweedle ushanka', 'ushanka_2', 'viking', 'wehrmacht', 'wehrmacht2 wing_freedom ']
 
-    return choice(soundFiles).name[:-4]
-
+    return choice(hats)
 
 modelDirs = [*scandir(MODELS_PATH1), *scandir(MODELS_PATH2)]
 model = choice(modelDirs).name
-name = fromSounds()
-
-# with open('text.txt', 'r', encoding='utf-8') as f:
-#     name = choice((fromWords, fromChars))(f)
+name = chooseSound()
+hat = chooseHat()
 
 # Write vc voice and pitch to twlz config
-with open(TWLZ_CFG_PATH, 'w', encoding='utf-8') as f:
+with open(KING_CFG_PATH, 'w', encoding='utf-8') as f:
     vcDirs = [*scandir(VC_PATH)]
     vcVoice = choice(vcDirs).name[:-7]
     vcPitch = randint(60, 150)
-    f.write(
-        f".vc voice {vcVoice}\n.vc pitch {vcPitch}"
-    )
+    f.write(f".vc voice {vcVoice}\n.vc pitch {vcPitch}\n.skin -2\n.hat {hat}\n.trail random")
 
 # Write model command to my.cfg
 with open(MY_CFG_PATH, 'w', encoding='utf-8') as f:
-    f.write(
-        f"model {model}\nname {name}"
-    )
+    f.write(f"model {model}\nname {name}")
 
 # Append used model to json
 with open('used_models.json', 'r+') as f:
@@ -65,5 +58,6 @@ print(
     f"name {name}\n"
     f".vc voice {vcVoice}\n"
     f".vc pitch {vcPitch}\n"
+    f"hat {hat}\n"
 )
 
