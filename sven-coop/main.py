@@ -1,26 +1,25 @@
-from os import scandir
 from random import choice, randint
-from config import *
+from config import TRAIL_COLORNAMES, TRAIL_PALETTES, TRAIL_SPRITES, VC_NAMES, MODELS, CHAT_SOUNDS, HATS, KING_CFG_PATH, MY_CFG_PATH
 import json
 
 tcolorname = choice(TRAIL_COLORNAMES)
 tpalette = choice(TRAIL_PALETTES)
 tsprite = choice(TRAIL_SPRITES)
+voice = choice(VC_NAMES).name[:-7]
 model = choice(MODELS).name
 name = choice(CHAT_SOUNDS)
 hat = choice(HATS)
+pitch = randint(60, 150)
 
 # Server config
 with open(KING_CFG_PATH, 'w', encoding='utf-8') as f:
-    vcDirs = [*scandir(VC_PATH)]
-    vcVoice = choice(vcDirs).name[:-7]
-    vcPitch = randint(60, 150)
     scfg = \
         f'say trail {tcolorname} {tsprite}\n' + \
-        f'.vc voice {vcVoice}\n' + \
-        f'.vc pitch {vcPitch}\n' + \
-        f'.hat {hat}\n' + \
+        f'.flashlight {tcolorname}\n' + \
+        f'.vc voice {voice}\n' + \
+        f'.vc pitch {pitch}\n' + \
         f'.trail {tpalette}\n' + \
+        f'.hat {hat}\n' + \
          '.skin -2'
     f.write(scfg)
 

@@ -6,4 +6,6 @@ beatmaps/
 venv/
 collection.db
 temp_*
+*.pkl
+colornames.txt
 

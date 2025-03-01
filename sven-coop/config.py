@@ -5,13 +5,14 @@ from os import scandir
 
 SV_PATH = r'C:/Program Files (x86)/Steam/steamapps/common/Sven Co-op/'
 
-MODELS_PATH1    = rf'{SV_PATH}/svencoop_addon/models/player'
-MODELS_PATH2    = rf'{SV_PATH}/svencoop_downloads/models/player'
-MY_CFG_PATH     = rf'{SV_PATH}/svencoop/my.cfg'
-KING_CFG_PATH   = rf'{SV_PATH}/svencoop/king.cfg'
-VC_PATH         = rf'{SV_PATH}/svencoop_downloads/sound/vc/pack'
+MODELS_PATH1  = rf'{SV_PATH}/svencoop_addon/models/player'
+MODELS_PATH2  = rf'{SV_PATH}/svencoop_downloads/models/player'
+MY_CFG_PATH   = rf'{SV_PATH}/svencoop/my.cfg'
+KING_CFG_PATH = rf'{SV_PATH}/svencoop/king.cfg'
+VC_PATH       = rf'{SV_PATH}/svencoop_downloads/sound/vc/pack'
 
 MODELS = [*scandir(MODELS_PATH1), *scandir(MODELS_PATH2)]
+VC_NAMES = [*scandir(VC_PATH)]
 
 HATS = ['afro', 'angel2', 'angelhead', 'anticross', 'arrow autism', 'aviators', 'azusa_big', 'baron_bunny_new',
         'beerhat beret', 'booptail', 'camohat', 'cathead', 'cattail chef', 'clocknecklace', 'clown_wig',
@@ -41,6 +42,7 @@ def getChatSounds():
 def convert(filename):
     with open(f'{filename}.txt', 'r') as fr:
         with open(f'{filename}.pkl', 'wb') as fw:
+            # NOTE: replacing with '| ' (not ' | ') because each line has a whitespace before \n
             pickle.dump(fr.read().replace('\n', '| ').split(' | '), fw)
 
 
