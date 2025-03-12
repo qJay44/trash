@@ -11,10 +11,11 @@ name = choice(NICKNAMES)
 hat = choice(HATS)
 pitch = randint(60, 150)
 
-# Server config
-with open(KING_CFG_PATH, 'w', encoding='utf-8') as f:
-    def roll(win, lose=''): return win if randint(0, 100) < 10 else lose
 
+def create() -> tuple[str, str]:
+    def roll(winVal, loseVal='', winTres=10): return winVal if randint(1, 100) < winTres else loseVal
+
+    # Server config
     scfg = \
         roll(f'say trail {tcolorname} {tsprite}\n') + \
         roll(f'.trail {tpalette}\n') + \
@@ -24,19 +25,31 @@ with open(KING_CFG_PATH, 'w', encoding='utf-8') as f:
         f'.skin {roll(-2, 0)}\n' + \
         '.color off\n' + \
         '.e off'
-    f.write(scfg)
 
-# Client config
-with open(MY_CFG_PATH, 'w', encoding='utf-8') as f:
+    # Client config
     ccfg = f'model {model}\nname {name}'
-    f.write(ccfg)
 
-# Append used model to json
-with open('history.json', 'r+', encoding='utf-8') as f:
-    data = json.load(f)
-    data['cfgs'].append({'scfg': scfg, 'ccfg': ccfg})
-    f.seek(0)
-    json.dump(data, f, indent=4)
+    return (scfg, ccfg)
 
-print(f'{scfg}\n\n{ccfg}')
+
+def apply(scfg: str, ccfg: str) -> None:
+    with open(KING_CFG_PATH, 'w', encoding='utf-8') as f:
+        f.write(scfg)
+
+    with open(MY_CFG_PATH, 'w', encoding='utf-8') as f:
+        f.write(ccfg)
+
+    # Save cfgs to history.json
+    with open('history.json', 'r+', encoding='utf-8') as f:
+        data = json.load(f)
+        data['cfgs'].append({'scfg': scfg, 'ccfg': ccfg})
+        f.seek(0)
+        json.dump(data, f, indent=4)
+
+
+if __name__ == '__main__':
+    scfg, ccfg = create()
+    apply(scfg, ccfg)
+
+    print(f'{scfg}\n\n{ccfg}')
 
