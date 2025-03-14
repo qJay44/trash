@@ -17,7 +17,8 @@ class Dop:
                 self.real.append(f.read())
 
         with open('history.json', 'r', encoding='utf-8') as f:
-            self.created = json.load(f)['cfgs']
+            cfgFmt = 'exec clear.cfg\n%s\n%s'
+            self.created = [cfgFmt % (cfgData['scfg'], cfgData['ccfg']) for cfgData in json.load(f)['cfgs']]
 
     # Returns concatenated string with both client cfg and server cfg
     # (Should look like one from the "dop" folder)
@@ -26,18 +27,17 @@ class Dop:
 
         if percent >= 10:
             return choice(self.real)
-        elif percent >= 2:
-            cfgData = choice(self.created)
-            return f'exec clear.cfg\n{cfgData['scfg']}\n{cfgData['ccfg']}'
+        if percent >= 2:
+            return choice(self.created)
         else:
             return 'exec clear.cfg\n{}\n{}'.format(*create())
 
+    @staticmethod
+    def apply(cfg) -> None:
+        with open(rf'{SC_PATH}/svencoop/dop.cfg', 'w', encoding='utf-8') as f:
+            f.write(cfg)
+
 
 if __name__ == '__main__':
-    dop = Dop()
-    cfg = dop.choose()
-    with open(rf'{SC_PATH}/svencoop/dop.cfg', 'w', encoding='utf-8') as f:
-        f.write(cfg)
-
-    print(cfg)
+    print(Dop().choose())
 
