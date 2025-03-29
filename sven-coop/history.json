@@ -15,6 +15,50 @@
         {
             "scfg": ".vc voice scientist\n.vc pitch 100\n.hat off\n.skin -2\n.color off\n.e off",
             "ccfg": "model hevbarney_ld\nname ConnorFPS"
+        },
+        {
+            "scfg": ".vc voice al_ayanami\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.e off",
+            "ccfg": "model chicken\nname Marellia"
+        },
+        {
+            "scfg": ".vc voice scientist\n.vc pitch 100\n.hat paperbag\n.skin 0\n.color off\n.e off",
+            "ccfg": "model spess_kagerou_ld\nname KawaiiNumse1"
+        },
+        {
+            "scfg": ".vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.e off",
+            "ccfg": "model da_blackgoku_rose\nname albine07"
+        },
+        {
+            "scfg": ".vc voice scientist\n.vc pitch 100\n.hat mic_chan\n.skin 0\n.color off\n.e off",
+            "ccfg": "model afterlife_brobo_fix\nname Cha0sKiwi"
+        },
+        {
+            "scfg": ".vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.e off",
+            "ccfg": "model airborne03_r\nname Joffyg9"
+        },
+        {
+            "scfg": ".vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.e off",
+            "ccfg": "model chichi\nname WaysonML"
+        },
+        {
+            "scfg": ".vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.e off",
+            "ccfg": "model tfcengineer_v2\nname shadowlop"
+        },
+        {
+            "scfg": "say trail palepeach point\n.vc voice scientist\n.vc pitch 100\n.hat pirate2\n.skin 0\n.color off\n.e off",
+            "ccfg": "model BA_Hoshino_HD\nname TheMrUnicorn"
+        },
+        {
+            "scfg": ".vc voice scientist\n.vc pitch 100\n.hat santahat\n.skin 0\n.color off\n.e off",
+            "ccfg": "model shadow_girl\nname Xlayer"
+        },
+        {
+            "scfg": ".vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.e off",
+            "ccfg": "model cx_mordekai1\nname JIGaming"
+        },
+        {
+            "scfg": ".vc voice scientist\n.vc pitch 100\n.hat jotaro_hat\n.skin 0\n.color off\n.e off",
+            "ccfg": "model saf\nname theflyinguboat"
         }
     ]
 }

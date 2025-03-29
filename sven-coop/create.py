@@ -1,8 +1,8 @@
 from random import choice, randint
-from config import TRAIL_COLORNAMES, TRAIL_PALETTES, TRAIL_SPRITES, VC_NAMES, MODELS, NICKNAMES, HATS, KING_CFG_PATH, MY_CFG_PATH
+from config import COLORNAMES, TRAIL_PALETTES, TRAIL_SPRITES, VC_NAMES, MODELS, NICKNAMES, HATS, KING_CFG_PATH, MY_CFG_PATH
 import json
 
-tcolorname = choice(TRAIL_COLORNAMES)
+tcolorname = choice(COLORNAMES)
 tpalette = choice(TRAIL_PALETTES)
 tsprite = choice(TRAIL_SPRITES)
 voice = choice(VC_NAMES).name[:-7]

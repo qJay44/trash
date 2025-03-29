@@ -25,14 +25,16 @@ PETS = ['aliengrunt', 'archer', 'babyheadcrab', 'bigmomma', 'bullsquid', 'chatar
         'gura', 'headcrab', 'hk416', 'houndeye', 'karen', 'loader', 'miketama', 'pizzashopowner', 'rat', 'skeleton', 'stukabat', 'touhou_chen', 'xenbat']
 
 TRAIL_SPRITES = ['arrows', 'fatline', 'interlace', 'lightning', 'point', 'smokey', 'squarewave', 'svenlogo', 'thinline', 'voice']
+
 TRAIL_PALETTES = ['anime', 'beach', 'cyberpunk', 'forest', 'goldfish', 'interceptor', 'intersex', 'lgbt', 'light', 'random',
                   'metro', 'moss', 'neonpunk', 'pansexual', 'pastel', 'seaweed', 'sugar', 'trap', 'wheel', 'white', 'winter']
 
 
-def getChatSounds():
-    response = requests.get(r'https://kingsc.net/ChatSounds.txt')
+def downloadCS():
+    response = requests.get(r'https://www.kingsc.net/ChatSounds.txt')
     if response.status_code != 200:
         print('Bad response')
+        exit(1)
     else:
         lines = [line.split('\t')[1].split(' ')[0] for line in response.text.splitlines()[3:]]
         with open('cs.pkl', 'wb') as f:
@@ -44,11 +46,13 @@ def convert(filename):
     with open(f'{filename}.txt', 'r') as fr:
         with open(f'{filename}.pkl', 'wb') as fw:
             # NOTE: replacing with '| ' (not ' | ') because each line has a whitespace before \n
-            pickle.dump(fr.read().replace('\n', '| ').split(' | '), fw)
+            names = fr.read().replace('\n', '| ').split(' | ')
+            names.pop() # removing empty string at the end
+            pickle.dump(names, fw)
 
 
 if not exists('cs.pkl'):
-    getChatSounds()
+    downloadCS()
 
 if not exists('colornames.pkl'):
     # The list itself should in the corresponding .txt file
@@ -59,5 +63,5 @@ if not exists('colornames.pkl'):
 
 # Large lists are stored in pickle files
 NICKNAMES = (lambda: (f:=open('cs.pkl' if randint(0, 100) < 5 else 'hypixel-players.pkl', 'rb'), pickle.load(f), f.close())[1])()
-TRAIL_COLORNAMES = (lambda: (f:=open('colornames.pkl', 'rb'), pickle.load(f), f.close())[1])()
+COLORNAMES = (lambda: (f:=open('colornames.pkl', 'rb'), pickle.load(f), f.close())[1])()
 
