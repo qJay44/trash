@@ -64,4 +64,3 @@ if not exists('colornames.pkl'):
 # Large lists are stored in pickle files
 NICKNAMES = (lambda: (f:=open('cs.pkl' if randint(0, 100) < 5 else 'hypixel-players.pkl', 'rb'), pickle.load(f), f.close())[1])()
 COLORNAMES = (lambda: (f:=open('colornames.pkl', 'rb'), pickle.load(f), f.close())[1])()
-

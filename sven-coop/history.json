@@ -57,8 +57,24 @@
             "ccfg": "model cx_mordekai1\nname JIGaming"
         },
         {
-            "scfg": ".vc voice scientist\n.vc pitch 100\n.hat jotaro_hat\n.skin 0\n.color off\n.e off",
+            "scfg": ".vc voice soldier\n.vc pitch 100\n.hat jotaro_hat\n.skin 0\n.color off\n.e off",
             "ccfg": "model saf\nname theflyinguboat"
+        },
+        {
+            "scfg": ".vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.e off",
+            "ccfg": "model hl2_gordon\nname Fastdog007"
+        },
+        {
+            "scfg": ".vc voice dukenukem\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.e off",
+            "ccfg": "model codename_natasha\nname Mini_Leopard"
+        },
+        {
+            "scfg": ".vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.e off",
+            "ccfg": "model bubba_gump_v2\nname AntiSebi"
+        },
+        {
+            "scfg": ".vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.e off",
+            "ccfg": "model hn_purple_heart_a_v2\nname PhantomHorror"
         }
     ]
 }
