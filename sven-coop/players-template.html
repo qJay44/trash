@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!-- saved from url=(0126)https://cache.gametracker.com/components/html0/?host=198.244.176.86:27016&currentPlayersHeight=200&showCurrPlayers=1&width=300 -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>
+		GameTracker.com Component
+	</title>
+	<style type="text/css">
+		
+		body						{ margin: 0; padding: 0; }
+		img							{ border: none; }
+		div.global					{ border-style:solid; border-width:1px; font-family: Arial, Helvetica, sans-serif; font-size:11px; padding:0; overflow:hidden;}
+		div.global					{ width:298px; height:386px; background-color:#333333; color:#cccccc; border-color:#555555; }
+		div.global a				{ color:#ffcc00; text-decoration:none; }
+		div.global table			{ border-collapse:collapse; padding:0; }
+		.item_color_link			{ color:#ffcc00; cursor:pointer; }
+		.item_float_left			{ float:left; }
+		.item_float_right			{ float:right; }
+		.item_float_clear			{ clear:both; height:0px; font-size:0px; line-height:0px; }
+		.item_textalign_center		{ text-align:center; }
+		div.item_h05				{ height:5px; }
+
+		img.image_160x120			{ width:160px; height:120px; }
+		img.image_132x99			{ width:132px; height:99px; }
+
+
+		div.header_footer			{ height:16px; line-height:16px; padding:1px; overflow:hidden; text-align:right; background-color:#555555; }
+		div.header_footer a			{ font-size:11px; text-decoration:none; color:#222222; }
+
+		div.info_line				{ margin:2px 4px; height:14px; overflow:hidden; }
+		div.info_line_right			{ float:right; overflow:hidden; width:240px; }
+
+		div.map_image				{ margin:2px; text-align:center; }
+		div.map_image img			{ display:block; border:solid; border-width:1px; margin-left:auto; margin-right:auto;}
+		div.map_image img			{ border-color:#555555; }
+
+		div.server_name				{ margin:2px; height:28px; padding:2px; border:solid; border-width:1px; overflow:hidden; font-weight:bold; }
+		div.server_name				{ width:288px; background-color:#222222; border-color:#555555; color:#ff9900; }
+
+		div.scrollable				{ margin:2px; height:100px; padding:2px; border:solid; border-width:1px; overflow-x:hidden; overflow-y:auto; position:relative;}
+		div.scrollable				{ width:288px; background-color:#222222; border-color:#555555; }
+		div.scrollable_noresults	{ text-align:center; vertical-align:middle; margin-top:40px; }
+		div.scrollable_on_c01		{ float:left; white-space:nowrap; width:21px; overflow:hidden; }
+		div.scrollable_on_c02		{ float:left; white-space:nowrap; width:204px; overflow:hidden; }
+		div.scrollable_on_c03		{ float:right; white-space:nowrap; text-align:right; }
+		div.scrollable_blogspc		{ margin:3px 0px; height:1px; background-color:#555555; }
+		div.scrollable_bloghdr		{ font-weight:bold; white-space:nowrap; }
+
+		div.channelViewScrollable	{ height:200px; }
+
+		div.scrollable_topplayers	{ height:100px; }
+
+
+		#popuptest					{ width:288px; height:376px; overflow-x:auto; font-weight:bold; display:none; padding:5px; text-align:center; }
+
+		span.btn_custom				{ text-decoration:none; font-size:11px; height:16px; line-height:16px; border:solid; border-width:1px; overflow:hidden; text-align:center; cursor:pointer; font-weight:bold; color:#ffcc00; border-color:#555555; background-color:#222222; padding:0px 4px; }
+
+
+		div.tree_header					{ line-height:16px; height:16px; white-space:nowrap; color:#ff9900; position:relative; padding-left:20px;}
+		div.tree_item					{ position:relative; height:16px; width:600px; overflow:hidden; white-space:nowrap;}
+
+		div.tree_to0					{ position:absolute; top:0px; width:16px; height:16px; }
+		div.tree_to1					{ position:absolute; top:0px; width:16px; height:16px; background-image:url(/images/server_info/voicesprites.png); background-position:0px 0px; }
+		div.tree_to2					{ position:absolute; top:0px; width:16px; height:16px; background-image:url(/images/server_info/voicesprites.png); background-position:-16px 0px; }
+		div.tree_to3					{ position:absolute; top:0px; width:16px; height:16px; background-image:url(/images/server_info/voicesprites.png); background-position:-32px 0px; }
+
+		div.tree_ts30					{ position:absolute; top:0px; width:16px; height:16px; background-image:url(/images/server_info/voicesprites.png); background-position:0px -16px; }
+		div.tree_ts31					{ position:absolute; top:0px; width:16px; height:16px; background-image:url(/images/server_info/voicesprites.png); background-position:-16px -16px; }
+
+		div.tree_mu0					{ position:absolute; top:0px; width:16px; height:16px; background-image:url(/images/server_info/voicesprites.png); background-position:0px -32px; }
+		div.tree_mu1					{ position:absolute; top:0px; width:16px; height:16px; background-image:url(/images/server_info/voicesprites.png); background-position:-16px -32px; }
+		div.tree_mu2					{ position:absolute; top:0px; width:16px; height:16px; background-image:url(/images/server_info/voicesprites.png); background-position:-32px -32px; }
+
+		div.tree_ts0					{ position:absolute; top:0px; width:16px; height:16px; background-image:url(/images/server_info/voicesprites.png); background-position:0px -48px; }
+		div.tree_ts1					{ position:absolute; top:0px; width:16px; height:16px; background-image:url(/images/server_info/voicesprites.png); background-position:-16px -48px; }
+		div.tree_ts2					{ position:absolute; top:0px; width:16px; height:16px; background-image:url(/images/server_info/voicesprites.png); background-position:-32px -48px; }
+		div.tree_ts3					{ position:absolute; top:0px; width:16px; height:16px; background-image:url(/images/server_info/voicesprites.png); background-position:-48px -48px; }
+		div.tree_ts4					{ position:absolute; top:0px; width:16px; height:16px; background-image:url(/images/server_info/voicesprites.png); background-position:-64px -48px; }
+		div.tree_ts5					{ position:absolute; top:0px; width:16px; height:16px; background-image:url(/images/server_info/voicesprites.png); background-position:-80px -48px; }
+
+		div.tree_vt0					{ position:absolute; top:0px; width:16px; height:16px; background-image:url(/images/server_info/voicesprites.png); background-position:0px -64px; }
+		div.tree_vt1					{ position:absolute; top:0px; width:16px; height:16px; background-image:url(/images/server_info/voicesprites.png); background-position:-16px -64px; }
+		div.tree_vt2					{ position:absolute; top:0px; width:16px; height:16px; background-image:url(/images/server_info/voicesprites.png); background-position:-32px -64px; }
+		div.tree_vt3					{ position:absolute; top:0px; width:16px; height:16px; background-image:url(/images/server_info/voicesprites.png); background-position:-48px -64px; }
+		div.tree_vt4					{ position:absolute; top:0px; width:16px; height:16px; background-image:url(/images/server_info/voicesprites.png); background-position:-64px -64px; }
+		div.tree_vt5					{ position:absolute; top:0px; width:16px; height:16px; background-image:url(/images/server_info/voicesprites.png); background-position:-80px -64px; }
+		div.tree_vt6					{ position:absolute; top:0px; width:16px; height:16px; background-image:url(/images/server_info/voicesprites.png); background-position:-96px -64px; }
+
+		div.tree_bsc					{ position:absolute; top:0px; height:16px; line-height:16px; white-space:nowrap; overflow:hidden; padding-left:2px; }
+		span.tree_fr					{ font-family:Arial; margin:0px 2px; background-color:#333333; padding:0px 3px; border:solid 1px #555555; font-size:8px; }
+		span.tree_fp					{ font-family:Arial; margin:0px 2px; background-color:#333333; padding:0px 3px; border:solid 1px #555555; font-size:8px; color:#FFCC00;}
+		span.tree_fc					{ font-family:Arial; margin:0px 2px; background-color:#333333; padding:0px 3px; border:solid 1px #555555; font-size:8px; color:#CC9900;}
+		span.tree_advanced				{ margin-left:30px; color:#777777; display:none; }
+	</style>
+</head>
+<body cz-shortcut-listen="true">
+	
+	<div class="global">
+		<div class="header_footer">
+			<div class="item_float_left">
+				<a href="https://www.gametracker.com/search/hl/GB/" target="_blank">
+					<img src="./players-template_files/gb.gif" alt="GB" title="United Kingdom">
+				</a>
+				&nbsp;
+			</div>
+			<div class="item_float_right">
+				&nbsp;
+				<a href="https://www.gametracker.com/search/hl/" target="_blank">
+					<img src="./players-template_files/hl.png" alt="Half Life 1" title="Half Life 1">
+				</a>
+			</div>
+			<div class="item_float_right">
+				<a href="https://www.gametracker.com/search/hl/" target="_blank">
+					Half Life 1
+				</a>
+			</div>
+			<div class="item_float_clear">
+			</div>
+		</div>
+		<div class="server_name">
+		</div>
+		<div class="info_line">
+			<div class="item_float_left">
+				<b>IP:</b>
+			</div>
+			<div class="item_float_right">
+			</div>
+			<div class="item_float_clear"></div>
+		</div>
+		<div class="info_line">
+			<div class="item_float_left">
+				<b>Players:</b>
+			</div>
+			<div class="item_float_right">
+			</div>
+			<div class="item_float_clear"></div>
+		</div>
+		<div class="info_line">
+			<div class="item_float_left">
+				<b>Rank:</b>
+			</div>
+			<div class="item_float_right">
+			</div>
+			<div class="item_float_clear">
+			</div>
+		</div>
+		<div class="info_line">
+			<div class="item_float_left">
+				<b>Map:</b>
+			</div>
+			<div class="info_line_right">
+			</div>
+			<div class="item_float_clear"></div>
+		</div>
+				
+		<div class="info_line">
+			<b>Online Players:</b>
+		</div>
+		<div class="scrollable channelViewScrollable">
+			<div class="scrollable_noresults">
+			</div>
+		</div>
+		<div style="height:24px; overflow:hidden;">
+			&nbsp;
+		</div>
+		<div class="header_footer">
+			<div class="item_float_right">
+				&nbsp;
+				<a href="https://www.gametracker.com/" target="_blank">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAApRJREFUeNqkk0tIVGEUx3937r3zcHzkRD7wNVqpWZZaDLhwFNEKpY1mFJJWBG2KttFC2rQTVxHRpkVIKC2KxMIWgS60ly/ENDJSx0czOZozOnfmzjjdO2LRok0eOPCdj/P/f/9z/nxU1l3AIBD9n9Sxgn5gFyFZNIadSE2WOeO0U1VRQkZWCvOuZe4/esPQhPffBDuH/elm2m6ewllTi81qQpAM5BWu8/TZ0F+A3ESZ8vwEXoyt4lOjSAmyQIZNov1uC1U1JyHoRw35iGwGmB4ZYej9Ejs9zqIkLp9OJS8nCdqnYiQxBVfOlVFVXR0DD/a/5t6DHqbnNmMvHswy0tqYT9MlB6+6PqIGNwgFFI4XWrcJLKKA0+mINX8aHeTG7W68PyOUHLDQfLaIhrpSBE0NiytkpUn09a4x3uVibF5FxxritB3as/aB6uPJ4x6U9Qj63fVrJ2hsqUbY8LKxPEPU7aGkSGL8i5/RrwpRdbtPMmksshjRCNbw+4LotR7dncPY7Wb6e6fYUhRa6zIRoyHSbCKm2T/OGUyajSvuBY1gg9rKHPRaz/HJAG23BnjYuYCqhhHNCu7FVQrSjGQnGH/3iflW8U5xkVkbI5nczDjUTQ8LLm2Bmii/L0JTfSIX622Y4gL0DfjZExVIMUt8Xgoi6yPEaZJfPp+g+OhebLLM1fOHqHAk4fH4sWluFaRLWOQAbm3z37+FKRQMlGeL9E/KrCvhbQV+b5jlpR8cKTVhNUdItUbJTRVIS9pCNgdQLAodHQreOYHDiWESjGEMkpFpt7ptox4fBtfwLAzjcMRTWmYmMX4Ln09hZCTE23dhZufCSNrMrhSRVW28GU8kZqPQnGHa1WcyuI41CJIg8D+pY38JMABbJv55CM+zXQAAAABJRU5ErkJggg==" alt="Gametracker.com">
+				</a>
+			</div>
+			<div class="item_float_right">
+				<a href="https://www.gametracker.com/" target="_blank">
+				GameTracker.com
+				</a>
+			</div>
+			<div class="item_float_clear"></div>
+		</div>
+	</div>
+
+</body></html>

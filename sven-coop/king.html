@@ -8,17 +8,53 @@
         margin-left: auto;
         margin-right: auto;
       }
+      #players-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 5px;
+      }
+      #players {
+        position: absolute;
+        visibility: hidden;
+      }
+      #players-template {
+        position: absolute;
+        visibility: visible;
+      }
     </style>
   </head>
+  <script>
+    function showCurrPlayers(port) {
+      const frame = document.getElementById("players")
+      frame.src = `https://cache.gametracker.com/components/html0/?host=198.244.176.86:${port}&currentPlayersHeight=200&showCurrPlayers=1&width=300`
+      frame.style.visibility = 'hidden'
+    }
+
+    function showFrame() {
+      const frame = document.getElementById("players")
+      frame.style.visibility = 'visible'
+    }
+
+    function hideFrame() {
+      const frame = document.getElementById("players")
+      frame.style.visibility = 'hidden'
+    }
+  </script>
   <body>
-    <a href="steam://connect/198.244.176.86:27015"><img src="https://cache.gametracker.com/server_info/198.244.176.86:27015/banner_560x95.png?random=1" border="0" width="560" height="95" alt=""></a>
-    <a href="steam://connect/198.244.176.86:27016"><img src="https://cache.gametracker.com/server_info/198.244.176.86:27016/banner_560x95.png?random=1" border="0" width="560" height="95" alt=""></a>
-    <a href="steam://connect/198.244.176.86:27017"><img src="https://cache.gametracker.com/server_info/198.244.176.86:27017/banner_560x95.png?random=1" border="0" width="560" height="95" alt=""></a>
-    <a href="steam://connect/198.244.176.86:27018"><img src="https://cache.gametracker.com/server_info/198.244.176.86:27018/banner_560x95.png?random=1" border="0" width="560" height="95" alt=""></a>
-    <a href="steam://connect/198.244.176.86:27019"><img src="https://cache.gametracker.com/server_info/198.244.176.86:27019/banner_560x95.png?random=1" border="0" width="560" height="95" alt=""></a>
-    <a href="steam://connect/198.244.176.86:27020"><img src="https://cache.gametracker.com/server_info/198.244.176.86:27020/banner_560x95.png?random=1" border="0" width="560" height="95" alt=""></a>
-    <a href="steam://connect/198.244.176.86:27021"><img src="https://cache.gametracker.com/server_info/198.244.176.86:27021/banner_560x95.png?random=1" border="0" width="560" height="95" alt=""></a>
-    <a href="steam://connect/198.244.176.86:27022"><img src="https://cache.gametracker.com/server_info/198.244.176.86:27022/banner_560x95.png?random=1" border="0" width="560" height="95" alt=""></a>
+    <div onmouseleave="hideFrame()">
+      <a href="steam://connect/198.244.176.86:27015" onmouseenter="showCurrPlayers(27015)"><img src="https://cache.gametracker.com/server_info/198.244.176.86:27015/banner_560x95.png?random=1" border="0" width="560" height="95" alt=""></a>
+      <a href="steam://connect/198.244.176.86:27016" onmouseenter="showCurrPlayers(27016)"><img src="https://cache.gametracker.com/server_info/198.244.176.86:27016/banner_560x95.png?random=1" border="0" width="560" height="95" alt=""></a>
+      <a href="steam://connect/198.244.176.86:27017" onmouseenter="showCurrPlayers(27017)"><img src="https://cache.gametracker.com/server_info/198.244.176.86:27017/banner_560x95.png?random=1" border="0" width="560" height="95" alt=""></a>
+      <a href="steam://connect/198.244.176.86:27018" onmouseenter="showCurrPlayers(27018)"><img src="https://cache.gametracker.com/server_info/198.244.176.86:27018/banner_560x95.png?random=1" border="0" width="560" height="95" alt=""></a>
+      <a href="steam://connect/198.244.176.86:27019" onmouseenter="showCurrPlayers(27019)"><img src="https://cache.gametracker.com/server_info/198.244.176.86:27019/banner_560x95.png?random=1" border="0" width="560" height="95" alt=""></a>
+      <a href="steam://connect/198.244.176.86:27020" onmouseenter="showCurrPlayers(27020)"><img src="https://cache.gametracker.com/server_info/198.244.176.86:27020/banner_560x95.png?random=1" border="0" width="560" height="95" alt=""></a>
+      <a href="steam://connect/198.244.176.86:27021" onmouseenter="showCurrPlayers(27021)"><img src="https://cache.gametracker.com/server_info/198.244.176.86:27021/banner_560x95.png?random=1" border="0" width="560" height="95" alt=""></a>
+      <a href="steam://connect/198.244.176.86:27022" onmouseenter="showCurrPlayers(27022)"><img src="https://cache.gametracker.com/server_info/198.244.176.86:27022/banner_560x95.png?random=1" border="0" width="560" height="95" alt=""></a>
+    </div>
+    <div id="players-container">
+      <iframe id="players-template" src="players-template.html" frameborder="0" scrolling="no" width="300" height="386"></iframe>
+      <iframe id="players" src="" frameborder="0" scrolling="no" width="300" height="386" onload="showFrame()"></iframe>
+    </div>
   </body>
 </html>
 
