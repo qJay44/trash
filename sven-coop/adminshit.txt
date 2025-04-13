@@ -1,1 +1,2 @@
 .ent_create fw_sizzler origin : aim
+.player_give @all weapon_satchel

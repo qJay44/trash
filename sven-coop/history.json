@@ -75,6 +75,10 @@
         {
             "scfg": ".vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.e off",
             "ccfg": "model hn_purple_heart_a_v2\nname PhantomHorror"
+        },
+        {
+            "scfg": ".vc voice scientist\n.vc pitch 141\n.hat ricefarmer\n.skin 0\n.color off\n.e off",
+            "ccfg": "model dc_hosung\nname xPeqiHD"
         }
     ]
 }

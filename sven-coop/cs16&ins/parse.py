@@ -116,17 +116,34 @@ filesIns = [
     r'lmg\weapon_ins2mg42.as',
 ]
 
+
 def parseFields(lines: list[str]) -> dict[str, str|int]:
     fieldsInfo = {}
+    typeCasts = {
+        "int": int,
+        "uint": int,
+        "float": float,
+        "string": str,
+        "Vector": lambda x, y, z: (float(x), float(y), float(z))
+    }
     for line in lines.split('\n'):
         if 'Vector' in line:
             match = re.search(r'(\w+)\(([^<>]*)\)', line)
             fname = match.group(1)
-            fvalue = match.group(2)
+            fxyz = match.group(2).strip().replace('f', '').split(', ')
+            fvalue = typeCasts['Vector'](*fxyz)
         else:
             ftypeAndName, fvalueDirty = line.split('=')
-            fname = ftypeAndName.split(' ')[1].strip()
-            fvalue = fvalueDirty.strip()[:-1].replace('"', '')
+            ftype, fnameDirty = ftypeAndName.split(' ')[:2]
+            fname = fnameDirty.strip()
+            fvalue = fvalueDirty.strip().split(';')[0].replace('"', '').replace('f', '')
+
+            if 'MAX_CLIP' in fvalue:
+                fvalue = eval(fvalue.replace('MAX_CLIP', str(fieldsInfo['MAX_CLIP'])))
+            elif len(fvalue) > 0 and not fvalue[0].isdigit():
+                pass
+            else:
+                fvalue = typeCasts[ftype](fvalue)
 
         fieldsInfo[fname] = fvalue
 
@@ -137,12 +154,13 @@ def parseFile(filePath: str, skipBuyMenuInfo=False) -> dict[str, dict[str, str|i
     weaponInfo = {}
     with open(rf'{filePath}', 'r') as f:
         text = f.read()
-        infoText = re.search(r'(?<=\/\/ Information\n)(.+\n)+', text).group(0).strip()
-        weaponInfo['infoBasic'] = parseFields(infoText)
 
-        if not skipBuyMenuInfo:
-            buyMenuInfoText = re.search(r'(?<=\/\/Buy Menu Information\n)(.+\n)+', text).group(0).strip()
-            weaponInfo['infoBuy'] = parseFields(buyMenuInfoText)
+    infoText = re.search(r'(?<=\/\/ Information\n)(.+\n)+', text).group(0).strip()
+    weaponInfo['infoBasic'] = parseFields(infoText)
+
+    if not skipBuyMenuInfo:
+        buyMenuInfoText = re.search(r'(?<=\/\/Buy Menu Information\n)(.+\n)+', text).group(0).strip()
+        weaponInfo['infoBuy'] = parseFields(buyMenuInfoText)
 
     return weaponInfo
 
