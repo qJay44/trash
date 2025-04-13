@@ -1,0 +1,579 @@
+{
+    "weapon_sg552": {
+        "infoBasic": {
+            "MAX_CARRY": "90",
+            "MAX_CLIP": "30",
+            "DEFAULT_GIVE": "MAX_CLIP * 3",
+            "WEIGHT": "5",
+            "FLAGS": "ITEM_FLAG_NOAUTOSWITCHEMPTY",
+            "DAMAGE": "26",
+            "SLOT": "5",
+            "POSITION": "10",
+            "RPM": "0.0825f",
+            "RPM_ZOOMED": "0.135f",
+            "MAX_SHOOT_DIST": "8192",
+            "AMMO_TYPE": "cs16_5.56nato",
+            "AIM_SPEED": "270"
+        },
+        "infoBuy": {
+            "WPN_NAME": "SIG SG 552",
+            "WPN_PRICE": "420",
+            "AMMO_NAME": "SG 552 5.56 Magazine",
+            "AMMO_PRICE": "30"
+        }
+    },
+    "weapon_xm1014": {
+        "infoBasic": {
+            "MAX_CARRY": "32",
+            "MAX_CLIP": "7",
+            "DEFAULT_GIVE": "MAX_CLIP * 3",
+            "WEIGHT": "5",
+            "FLAGS": "ITEM_FLAG_NOAUTOSWITCHEMPTY",
+            "DAMAGE": "15",
+            "SLOT": "2",
+            "POSITION": "5",
+            "RPM": "0.25f",
+            "MAX_SHOOT_DIST": "3048",
+            "AMMO_TYPE": "cs16_12gauge",
+            "PELLETS": "6",
+            "CONE": " 0.0725f, 0.0725f, 0 "
+        },
+        "infoBuy": {
+            "WPN_NAME": "Leone YG1265 Auto Shotgun",
+            "WPN_PRICE": "400",
+            "AMMO_NAME": "Leone 12G 7 Shell Box",
+            "AMMO_PRICE": "15"
+        }
+    },
+    "weapon_csm249": {
+        "infoBasic": {
+            "MAX_CARRY": "200",
+            "MAX_CLIP": "100",
+            "DEFAULT_GIVE": "MAX_CLIP * 2",
+            "WEIGHT": "65",
+            "FLAGS": "ITEM_FLAG_NOAUTOSWITCHEMPTY",
+            "DAMAGE": "23",
+            "SLOT": "7",
+            "POSITION": "4",
+            "MAX_SHOOT_DIST": "8192",
+            "RPM": "0.1f",
+            "AMMO_TYPE": "cs16_5.56ap"
+        },
+        "infoBuy": {
+            "WPN_NAME": "FN M249 SAW",
+            "WPN_PRICE": "600",
+            "AMMO_NAME": "M249 5.56 NATO Box",
+            "AMMO_PRICE": "100"
+        }
+    },
+    "weapon_hegrenade": {
+        "infoBasic": {
+            "MAX_CARRY": "10",
+            "MAX_CLIP": "WEAPON_NOCLIP",
+            "DEFAULT_GIVE": "1",
+            "WEIGHT": "5",
+            "FLAGS": "ITEM_FLAG_LIMITINWORLD | ITEM_FLAG_EXHAUSTIBLE",
+            "DAMAGE": "150",
+            "SLOT": "4",
+            "POSITION": "4",
+            "AMMO_TYPE": "GetName()",
+            "TIMER": "1.5"
+        },
+        "infoBuy": {
+            "WPN_NAME": "High Explosive Grenade",
+            "WPN_PRICE": "50"
+        }
+    },
+    "weapon_usp": {
+        "infoBasic": {
+            "MAX_CARRY": "100",
+            "MAX_CLIP": "12",
+            "DEFAULT_GIVE": "MAX_CLIP * 3",
+            "WEIGHT": "5",
+            "FLAGS": "ITEM_FLAG_NOAUTOSWITCHEMPTY",
+            "DAMAGE": "18",
+            "DAMAGE2": "16",
+            "SLOT": "1",
+            "POSITION": "5",
+            "RPM": "0.155f",
+            "MAX_SHOOT_DIST": "4096",
+            "AMMO_TYPE": "cs16_45acp"
+        },
+        "infoBuy": {
+            "WPN_NAME": "H&K USP .45 Tactical",
+            "WPN_PRICE": "160",
+            "AMMO_NAME": "USP .45ACP Magazine",
+            "AMMO_PRICE": "10"
+        }
+    },
+    "weapon_sg550": {
+        "infoBasic": {
+            "MAX_CARRY": "90",
+            "MAX_CLIP": "30",
+            "DEFAULT_GIVE": "MAX_CLIP * 3",
+            "WEIGHT": "5",
+            "FLAGS": "ITEM_FLAG_NOAUTOSWITCHEMPTY",
+            "DAMAGE": "50",
+            "SLOT": "6",
+            "POSITION": "6",
+            "RPM": "0.25f",
+            "MAX_SHOOT_DIST": "8192",
+            "AMMO_TYPE": "cs16_5.56nato",
+            "AIM_SPEED": "200"
+        },
+        "infoBuy": {
+            "WPN_NAME": "SIG SG550",
+            "WPN_PRICE": "460",
+            "AMMO_NAME": "SG550 5.56 NATO Magazine",
+            "AMMO_PRICE": "30"
+        }
+    },
+    "weapon_famas": {
+        "infoBasic": {
+            "MAX_CARRY": "90",
+            "MAX_CLIP": "25",
+            "DEFAULT_GIVE": "MAX_CLIP * 3",
+            "WEIGHT": "5",
+            "FLAGS": "ITEM_FLAG_NOAUTOSWITCHEMPTY",
+            "DAMAGE": "21",
+            "SLOT": "5",
+            "POSITION": "5",
+            "RPM_SINGLE": "0.0825",
+            "RPM_BURST": "0.05f",
+            "MAX_SHOOT_DIST": "8192",
+            "AMMO_TYPE": "cs16_5.56nato"
+        },
+        "infoBuy": {
+            "WPN_NAME": "GIAT FAMAS F1",
+            "WPN_PRICE": "325",
+            "AMMO_NAME": "FAMAS 5.56 NATO Magazine",
+            "AMMO_PRICE": "25"
+        }
+    },
+    "weapon_ak47": {
+        "infoBasic": {
+            "MAX_CARRY": "90",
+            "MAX_CLIP": "30",
+            "DEFAULT_GIVE": "MAX_CLIP * 3",
+            "WEIGHT": "5",
+            "FLAGS": "ITEM_FLAG_NOAUTOSWITCHEMPTY",
+            "DAMAGE": "27",
+            "SLOT": "5",
+            "POSITION": "7",
+            "RPM": "0.0955f",
+            "MAX_SHOOT_DIST": "8192",
+            "AMMO_TYPE": "cs16_7.62nato"
+        },
+        "infoBuy": {
+            "WPN_NAME": "AK-47",
+            "WPN_PRICE": "365",
+            "AMMO_NAME": "AK-47 7.62 Magazine",
+            "AMMO_PRICE": "45"
+        }
+    },
+    "weapon_aug": {
+        "infoBasic": {
+            "MAX_CARRY": "90",
+            "MAX_CLIP": "30",
+            "DEFAULT_GIVE": "MAX_CLIP * 3",
+            "WEIGHT": "5",
+            "FLAGS": "ITEM_FLAG_NOAUTOSWITCHEMPTY",
+            "DAMAGE": "24",
+            "SLOT": "5",
+            "POSITION": "9",
+            "RPM": "0.0825f",
+            "RPM_ZOOMED": "0.135f",
+            "MAX_SHOOT_DIST": "8192",
+            "AMMO_TYPE": "cs16_5.56nato",
+            "AIM_SPEED": "270"
+        },
+        "infoBuy": {
+            "WPN_NAME": "Steyr AUG",
+            "WPN_PRICE": "390",
+            "AMMO_NAME": "AUG 5.56 Magazine",
+            "AMMO_PRICE": "30"
+        }
+    },
+    "weapon_p228": {
+        "infoBasic": {
+            "MAX_CARRY": "52",
+            "MAX_CLIP": "13",
+            "DEFAULT_GIVE": "MAX_CLIP * 3",
+            "WEIGHT": "5",
+            "FLAGS": "ITEM_FLAG_NOAUTOSWITCHEMPTY",
+            "DAMAGE": "19",
+            "SLOT": "1",
+            "POSITION": "6",
+            "RPM": "0.145f",
+            "MAX_SHOOT_DIST": "4096",
+            "AMMO_TYPE": "cs16_.357sig"
+        },
+        "infoBuy": {
+            "WPN_NAME": "SIG-Sauer P228",
+            "WPN_PRICE": "175",
+            "AMMO_NAME": "P228 .357SIG Magazine",
+            "AMMO_PRICE": "15"
+        }
+    },
+    "weapon_galil": {
+        "infoBasic": {
+            "MAX_CARRY": "90",
+            "MAX_CLIP": "35",
+            "DEFAULT_GIVE": "MAX_CLIP * 3",
+            "WEIGHT": "5",
+            "FLAGS": "ITEM_FLAG_NOAUTOSWITCHEMPTY",
+            "DAMAGE": "22",
+            "SLOT": "5",
+            "POSITION": "6",
+            "RPM": "0.0875f",
+            "MAX_SHOOT_DIST": "8192",
+            "AMMO_TYPE": "cs16_5.56nato"
+        },
+        "infoBuy": {
+            "WPN_NAME": "IMI Galil",
+            "WPN_PRICE": "340",
+            "AMMO_NAME": "GALIL 5.56 NATO Magazine",
+            "AMMO_PRICE": "35"
+        }
+    },
+    "weapon_g3sg1": {
+        "infoBasic": {
+            "MAX_CARRY": "90",
+            "MAX_CLIP": "20",
+            "DEFAULT_GIVE": "MAX_CLIP * 3",
+            "WEIGHT": "75",
+            "FLAGS": "ITEM_FLAG_NOAUTOSWITCHEMPTY",
+            "DAMAGE": "59",
+            "SLOT": "6",
+            "POSITION": "7",
+            "RPM": "0.25f",
+            "MAX_SHOOT_DIST": "8192",
+            "AMMO_TYPE": "cs16_7.62nato",
+            "AIM_SPEED": "200"
+        },
+        "infoBuy": {
+            "WPN_NAME": "G3SG1",
+            "WPN_PRICE": "475",
+            "AMMO_NAME": "G3SG1 7.62 NATO Magazine",
+            "AMMO_PRICE": "35"
+        }
+    },
+    "weapon_awp": {
+        "infoBasic": {
+            "MAX_CARRY": "30",
+            "MAX_CLIP": "10",
+            "DEFAULT_GIVE": "MAX_CLIP * 3",
+            "WEIGHT": "5",
+            "FLAGS": "ITEM_FLAG_NOAUTOSWITCHEMPTY",
+            "DAMAGE": "112",
+            "SLOT": "6",
+            "POSITION": "5",
+            "MAX_SHOOT_DIST": "8192",
+            "RPM": "1.40f",
+            "AMMO_TYPE": "cs16_.338lapua",
+            "AIM_SPEED": "150"
+        },
+        "infoBuy": {
+            "WPN_NAME": "Arctic Warfare Police",
+            "WPN_PRICE": "500",
+            "AMMO_NAME": "AWP .338 Lapua Magazine",
+            "AMMO_PRICE": "30"
+        }
+    },
+    "weapon_m4a1": {
+        "infoBasic": {
+            "MAX_CARRY": "90",
+            "MAX_CLIP": "30",
+            "DEFAULT_GIVE": "MAX_CLIP * 3",
+            "WEIGHT": "5",
+            "FLAGS": "ITEM_FLAG_NOAUTOSWITCHEMPTY",
+            "DAMAGE": "24",
+            "DAMAGE2": "21",
+            "SLOT": "5",
+            "POSITION": "8",
+            "RPM": "0.0875f",
+            "MAX_SHOOT_DIST": "8192",
+            "AMMO_TYPE": "cs16_5.56nato"
+        },
+        "infoBuy": {
+            "WPN_NAME": "M4A1 Carbine",
+            "WPN_PRICE": "375",
+            "AMMO_NAME": "M4A1 5.56 Magazine",
+            "AMMO_PRICE": "30"
+        }
+    },
+    "weapon_scout": {
+        "infoBasic": {
+            "MAX_CARRY": "90",
+            "MAX_CLIP": "10",
+            "DEFAULT_GIVE": "MAX_CLIP * 3",
+            "WEIGHT": "5",
+            "FLAGS": "ITEM_FLAG_NOAUTOSWITCHEMPTY",
+            "DAMAGE": "56",
+            "SLOT": "6",
+            "POSITION": "4",
+            "MAX_SHOOT_DIST": "8192",
+            "RPM": "1.25f",
+            "AMMO_TYPE": "cs16_7.62nato",
+            "AIM_SPEED": "220"
+        },
+        "infoBuy": {
+            "WPN_NAME": "Steyr Scout",
+            "WPN_PRICE": "335",
+            "AMMO_NAME": "Scout 7.62 NATO Magazine",
+            "AMMO_PRICE": "20"
+        }
+    },
+    "weapon_csglock18": {
+        "infoBasic": {
+            "MAX_CARRY": "120",
+            "MAX_CLIP": "20",
+            "DEFAULT_GIVE": "MAX_CLIP * 3",
+            "WEIGHT": "5",
+            "FLAGS": "ITEM_FLAG_NOAUTOSWITCHEMPTY",
+            "DAMAGE": "14",
+            "SLOT": "1",
+            "POSITION": "4",
+            "RPM_SINGLE": "0.1f",
+            "RPM_BURST": "0.05f",
+            "MAX_SHOOT_DIST": "8192",
+            "AMMO_TYPE": "cs16_9mm"
+        },
+        "infoBuy": {
+            "WPN_NAME": "Glock 18",
+            "WPN_PRICE": "150",
+            "AMMO_NAME": "Glock 18 9mm Magazine",
+            "AMMO_PRICE": "10"
+        }
+    },
+    "weapon_csknife": {
+        "infoBasic": {
+            "MAX_CARRY": "-1",
+            "MAX_CLIP": "WEAPON_NOCLIP",
+            "DEFAULT_GIVE": "0",
+            "WEIGHT": "5",
+            "FLAGS": "-1",
+            "DAMAGE_SLASH": "20",
+            "DAMAGE_STAB": "55",
+            "SLOT": "0",
+            "POSITION": "5",
+            "AMMO_TYPE": "",
+            "SLASH_DIST": "48.0f",
+            "STAB_DIST": "32.0f"
+        },
+        "infoBuy": {
+            "WPN_NAME": "Badlands Bowie Knife",
+            "WPN_PRICE": "100"
+        }
+    },
+    "weapon_dualelites": {
+        "infoBasic": {
+            "MAX_CARRY": "120",
+            "MAX_CLIP": "30",
+            "DEFAULT_GIVE": "MAX_CLIP * 3",
+            "WEIGHT": "5",
+            "FLAGS": "ITEM_FLAG_NOAUTOSWITCHEMPTY",
+            "DAMAGE": "14",
+            "SLOT": "1",
+            "POSITION": "8",
+            "RPM": "0.1f",
+            "MAX_SHOOT_DIST": "8192",
+            "AMMO_TYPE": "cs16_9mm"
+        },
+        "infoBuy": {
+            "WPN_NAME": "Dual Berettas",
+            "WPN_PRICE": "190",
+            "AMMO_NAME": "Berettas 9mm Magazines",
+            "AMMO_PRICE": "15"
+        }
+    },
+    "weapon_c4": {
+        "infoBasic": {
+            "MAX_CARRY": "1",
+            "MAX_CLIP": "WEAPON_NOCLIP",
+            "DEFAULT_GIVE": "1",
+            "WEIGHT": "5",
+            "FLAGS": "ITEM_FLAG_LIMITINWORLD | ITEM_FLAG_EXHAUSTIBLE",
+            "DAMAGE": "99999",
+            "SLOT": "4",
+            "POSITION": "5",
+            "AMMO_TYPE": "GetName()",
+            "TIMER": "35",
+            "DELAY_FAIL": "1"
+        },
+        "infoBuy": {
+            "WPN_NAME": "C4 Explosive",
+            "WPN_PRICE": "600"
+        }
+    },
+    "weapon_mp5navy": {
+        "infoBasic": {
+            "MAX_CARRY": "120",
+            "MAX_CLIP": "30",
+            "DEFAULT_GIVE": "MAX_CLIP * 3",
+            "WEIGHT": "5",
+            "FLAGS": "ITEM_FLAG_NOAUTOSWITCHEMPTY",
+            "DAMAGE": "16",
+            "SLOT": "3",
+            "POSITION": "6",
+            "RPM": "0.075f",
+            "MAX_SHOOT_DIST": "8192",
+            "AMMO_TYPE": "cs16_9mm"
+        },
+        "infoBuy": {
+            "WPN_NAME": "H&K MP5 Navy",
+            "WPN_PRICE": "335",
+            "AMMO_NAME": "MP5 9mm Magazine",
+            "AMMO_PRICE": "15"
+        }
+    },
+    "weapon_m3": {
+        "infoBasic": {
+            "MAX_CARRY": "32",
+            "MAX_CLIP": "8",
+            "DEFAULT_GIVE": "MAX_CLIP * 3",
+            "WEIGHT": "5",
+            "FLAGS": "ITEM_FLAG_NOAUTOSWITCHEMPTY",
+            "DAMAGE": "9",
+            "SLOT": "2",
+            "POSITION": "4",
+            "RPM_PUMP": "0.875f",
+            "MAX_SHOOT_DIST": "3000",
+            "AMMO_TYPE": "cs16_12gauge",
+            "PELLETS": "9",
+            "CONE": " 0.0675f, 0.0675f, 0 "
+        },
+        "infoBuy": {
+            "WPN_NAME": "Leone 12 Gauge Super",
+            "WPN_PRICE": "330",
+            "AMMO_NAME": "Leone 12G 8 Shell Box",
+            "AMMO_PRICE": "20"
+        }
+    },
+    "weapon_p90": {
+        "infoBasic": {
+            "MAX_CARRY": "100",
+            "MAX_CLIP": "50",
+            "DEFAULT_GIVE": "MAX_CLIP * 3",
+            "WEIGHT": "5",
+            "FLAGS": "ITEM_FLAG_NOAUTOSWITCHEMPTY",
+            "DAMAGE": "15",
+            "SLOT": "3",
+            "POSITION": "8",
+            "RPM": "0.066f",
+            "MAX_SHOOT_DIST": "8192",
+            "AMMO_TYPE": "cs16_5.7mm"
+        },
+        "infoBuy": {
+            "WPN_NAME": "FN P90",
+            "WPN_PRICE": "375",
+            "AMMO_NAME": "P90 Magazine",
+            "AMMO_PRICE": "55"
+        }
+    },
+    "weapon_mac10": {
+        "infoBasic": {
+            "MAX_CARRY": "100",
+            "MAX_CLIP": "30",
+            "DEFAULT_GIVE": "MAX_CLIP * 3",
+            "WEIGHT": "5",
+            "FLAGS": "ITEM_FLAG_NOAUTOSWITCHEMPTY",
+            "DAMAGE": "17",
+            "SLOT": "3",
+            "POSITION": "4",
+            "RPM": "0.07f",
+            "MAX_SHOOT_DIST": "8192",
+            "AMMO_TYPE": "cs16_45acp"
+        },
+        "infoBuy": {
+            "WPN_NAME": "Ingram MAC-10",
+            "WPN_PRICE": "320",
+            "AMMO_NAME": "MAC-10 .45ACP Magazine",
+            "AMMO_PRICE": "20"
+        }
+    },
+    "weapon_csdeagle": {
+        "infoBasic": {
+            "MAX_CARRY": "35",
+            "MAX_CLIP": "7",
+            "DEFAULT_GIVE": "MAX_CLIP * 3",
+            "WEIGHT": "5",
+            "FLAGS": "ITEM_FLAG_NOAUTOSWITCHEMPTY",
+            "DAMAGE": "46",
+            "SLOT": "1",
+            "POSITION": "9",
+            "RPM": "0.225f",
+            "MAX_SHOOT_DIST": "8192",
+            "AMMO_TYPE": "cs16_.50ae"
+        },
+        "infoBuy": {
+            "WPN_NAME": "Desert Eagle",
+            "WPN_PRICE": "215",
+            "AMMO_NAME": "Desert Eagle .50AE Magazine",
+            "AMMO_PRICE": "15"
+        }
+    },
+    "weapon_fiveseven": {
+        "infoBasic": {
+            "MAX_CARRY": "100",
+            "MAX_CLIP": "20",
+            "DEFAULT_GIVE": "MAX_CLIP * 3",
+            "WEIGHT": "5",
+            "FLAGS": "ITEM_FLAG_NOAUTOSWITCHEMPTY",
+            "DAMAGE": "17",
+            "SLOT": "1",
+            "POSITION": "7",
+            "RPM": "0.14f",
+            "MAX_SHOOT_DIST": "4096",
+            "AMMO_TYPE": "cs16_5.7mm"
+        },
+        "infoBuy": {
+            "WPN_NAME": "FN Five-Seven",
+            "WPN_PRICE": "185",
+            "AMMO_NAME": "Five-Seven Magazine",
+            "AMMO_PRICE": "25"
+        }
+    },
+    "weapon_tmp": {
+        "infoBasic": {
+            "MAX_CARRY": "120",
+            "MAX_CLIP": "30",
+            "DEFAULT_GIVE": "MAX_CLIP * 3",
+            "WEIGHT": "5",
+            "FLAGS": "ITEM_FLAG_NOAUTOSWITCHEMPTY",
+            "DAMAGE": "16",
+            "SLOT": "3",
+            "POSITION": "5",
+            "RPM": "0.07f",
+            "MAX_SHOOT_DIST": "8192",
+            "AMMO_TYPE": "cs16_9mm"
+        },
+        "infoBuy": {
+            "WPN_NAME": "Steyr TMP",
+            "WPN_PRICE": "325",
+            "AMMO_NAME": "TMP 9mm Magazine",
+            "AMMO_PRICE": "15"
+        }
+    },
+    "weapon_ump45": {
+        "infoBasic": {
+            "MAX_CARRY": "100",
+            "MAX_CLIP": "25",
+            "DEFAULT_GIVE": "MAX_CLIP * 3",
+            "WEIGHT": "5",
+            "FLAGS": "ITEM_FLAG_NOAUTOSWITCHEMPTY",
+            "DAMAGE": "18",
+            "SLOT": "3",
+            "POSITION": "7",
+            "RPM": "0.1f",
+            "MAX_SHOOT_DIST": "8192",
+            "AMMO_TYPE": "cs16_45acp"
+        },
+        "infoBuy": {
+            "WPN_NAME": "H&K UMP45",
+            "WPN_PRICE": "350",
+            "AMMO_NAME": "UMP45 .45ACP Magazine",
+            "AMMO_PRICE": "25"
+        }
+    }
+}
