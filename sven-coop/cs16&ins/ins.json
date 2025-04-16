@@ -1,5 +1,5 @@
 {
-    "weapon_ins2svt40": {
+    "svt40": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 10,
@@ -12,10 +12,12 @@
             "RPM_AIR": 0.135,
             "RPM_WTR": 0.275,
             "AIM_FOV": 37,
-            "AMMO_TYPE": "ins2_7.62x54mm"
+            "AMMO_TYPE": "ins2_7.62x54mm",
+            "PRICE": 290,
+            "PRICE_AMMO": 30
         }
     },
-    "weapon_ins2mosin": {
+    "mosin": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 5,
@@ -27,10 +29,12 @@
             "POSITION": 5,
             "RPM": 1.65,
             "AIM_FOV": 20,
-            "AMMO_TYPE": "ins2_7.62x54mm"
+            "AMMO_TYPE": "ins2_7.62x54mm",
+            "PRICE": 320,
+            "PRICE_AMMO": 15
         }
     },
-    "weapon_ins2m40a1": {
+    "m40a1": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 5,
@@ -42,10 +46,12 @@
             "POSITION": 4,
             "RPM": 1.5,
             "AIM_FOV": 15,
-            "AMMO_TYPE": "ins2_7.62x51mm"
+            "AMMO_TYPE": "ins2_7.62x51mm",
+            "PRICE": 305,
+            "PRICE_AMMO": 10
         }
     },
-    "weapon_ins2kar98k": {
+    "kar98k": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 5,
@@ -63,10 +69,13 @@
             "AIM_FOV": 37,
             "AMMO_TYPE": "ins2_7.92x57mm",
             "AMMO_TYPE2": "ins2_30x250mm",
-            "PROJ_NAME": "proj_ins2kar98k"
+            "PROJ_NAME": "proj_ins2kar98k",
+            "PRICE": 240,
+            "PRICE_AMMO": 10,
+            "PRICE_AMMO_GL": 30
         }
     },
-    "weapon_ins2m21": {
+    "m21": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 10,
@@ -79,10 +88,12 @@
             "RPM_AIR": 0.185,
             "RPM_WTR": 0.4,
             "AIM_FOV": 16,
-            "AMMO_TYPE": "ins2_7.62x51mm"
+            "AMMO_TYPE": "ins2_7.62x51mm",
+            "PRICE": 350,
+            "PRICE_AMMO": 20
         }
     },
-    "weapon_ins2saiga12": {
+    "saiga12": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 20,
@@ -101,10 +112,12 @@
                 0.06105,
                 0.06105,
                 0.0
-            ]
+            ],
+            "PRICE": 1001,
+            "PRICE_AMMO": 80
         }
     },
-    "weapon_ins2g43": {
+    "g43": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 10,
@@ -117,10 +130,12 @@
             "RPM_AIR": 0.22,
             "RPM_WTR": 0.4,
             "AIM_FOV": 20,
-            "AMMO_TYPE": "ins2_7.92x57mm"
+            "AMMO_TYPE": "ins2_7.92x57mm",
+            "PRICE": 340,
+            "PRICE_AMMO": 20
         }
     },
-    "weapon_ins2webley": {
+    "webley": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 6,
@@ -135,10 +150,12 @@
             "SHOOT_DELAY": 0.06,
             "EMPTY_DELAY": 0.1,
             "AIM_FOV": 49,
-            "AMMO_TYPE": "ins2_455brit"
+            "AMMO_TYPE": "ins2_455brit",
+            "PRICE": 160,
+            "PRICE_AMMO": 10
         }
     },
-    "weapon_ins2ump45": {
+    "ump45": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 25,
@@ -153,10 +170,12 @@
             "RPM_BURST_AIR": 850.0,
             "RPM_BURST_WTR": 600.0,
             "AIM_FOV": 45,
-            "AMMO_TYPE": "ins2_45acp"
+            "AMMO_TYPE": "ins2_45acp",
+            "PRICE": 165,
+            "PRICE_AMMO": 20
         }
     },
-    "weapon_ins2dragunov": {
+    "dragunov": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 10,
@@ -169,10 +188,12 @@
             "RPM_AIR": 0.215,
             "RPM_WTR": 0.375,
             "AIM_FOV": 16,
-            "AMMO_TYPE": "ins2_7.62x54mm"
+            "AMMO_TYPE": "ins2_7.62x54mm",
+            "PRICE": 360,
+            "PRICE_AMMO": 30
         }
     },
-    "weapon_ins2garand": {
+    "garand": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 8,
@@ -186,10 +207,12 @@
             "RPM_AIR": 0.2,
             "RPM_WTR": 0.35,
             "AIM_FOV": 37,
-            "AMMO_TYPE": "ins2_7.62x63mm"
+            "AMMO_TYPE": "ins2_7.62x63mm",
+            "PRICE": 255,
+            "PRICE_AMMO": 15
         }
     },
-    "weapon_ins2m590": {
+    "m590": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 8,
@@ -207,10 +230,12 @@
                 0.04362,
                 0.04362,
                 0.0
-            ]
+            ],
+            "PRICE": 285,
+            "PRICE_AMMO": 50
         }
     },
-    "weapon_ins2enfield": {
+    "enfield": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 10,
@@ -222,10 +247,12 @@
             "POSITION": 7,
             "RPM_AIR": 1.26,
             "AIM_FOV": 37,
-            "AMMO_TYPE": "ins2_303brit"
+            "AMMO_TYPE": "ins2_303brit",
+            "PRICE": 270,
+            "PRICE_AMMO": 20
         }
     },
-    "weapon_ins2scarh": {
+    "scarh": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 20,
@@ -238,10 +265,12 @@
             "RPM_AIR": 600.0,
             "RPM_WTR": 500.0,
             "AIM_FOV": 40,
-            "AMMO_TYPE": "ins2_7.62x51mm"
+            "AMMO_TYPE": "ins2_7.62x51mm",
+            "PRICE": 350,
+            "PRICE_AMMO": 20
         }
     },
-    "weapon_ins2ppsh41": {
+    "ppsh41": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 71,
@@ -254,10 +283,12 @@
             "RPM_AIR": 900.0,
             "RPM_WTR": 775.0,
             "AIM_FOV": 45,
-            "AMMO_TYPE": "ins2_7.62x25mm"
+            "AMMO_TYPE": "ins2_7.62x25mm",
+            "PRICE": 235,
+            "PRICE_AMMO": 50
         }
     },
-    "weapon_ins2stg44": {
+    "stg44": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 30,
@@ -270,10 +301,12 @@
             "RPM_AIR": 575.0,
             "RPM_WTR": 500.0,
             "AIM_FOV": 40,
-            "AMMO_TYPE": "ins2_7.92x33mm"
+            "AMMO_TYPE": "ins2_7.92x33mm",
+            "PRICE": 290,
+            "PRICE_AMMO": 30
         }
     },
-    "weapon_ins2vp70": {
+    "vp70": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 18,
@@ -286,10 +319,12 @@
             "RPM_AIR": 1400.0,
             "RPM_WTR": 1150.0,
             "AIM_FOV": 49,
-            "AMMO_TYPE": "ins2_9x19mm"
+            "AMMO_TYPE": "ins2_9x19mm",
+            "PRICE": 170,
+            "PRICE_AMMO": 20
         }
     },
-    "weapon_ins2m1014": {
+    "m1014": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 7,
@@ -308,10 +343,12 @@
                 0.0349,
                 0.04362,
                 0.0
-            ]
+            ],
+            "PRICE": 330,
+            "PRICE_AMMO": 45
         }
     },
-    "weapon_ins2mp7": {
+    "mp7": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 40,
@@ -324,10 +361,12 @@
             "RPM_AIR": 950.0,
             "RPM_WTR": 700.0,
             "AIM_FOV": 45,
-            "AMMO_TYPE": "ins2_4.6x30mm"
+            "AMMO_TYPE": "ins2_4.6x30mm",
+            "PRICE": 315,
+            "PRICE_AMMO": 45
         }
     },
-    "weapon_ins2f2000": {
+    "f2000": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 30,
@@ -340,10 +379,12 @@
             "RPM_AIR": 850.0,
             "RPM_WTR": 600.0,
             "AIM_FOV": 30,
-            "AMMO_TYPE": "ins2_5.56x45mm"
+            "AMMO_TYPE": "ins2_5.56x45mm",
+            "PRICE": 265,
+            "PRICE_AMMO": 30
         }
     },
-    "weapon_ins2ithaca": {
+    "ithaca": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 6,
@@ -362,10 +403,12 @@
                 0.04062,
                 0.04062,
                 0.0
-            ]
+            ],
+            "PRICE": 275,
+            "PRICE_AMMO": 40
         }
     },
-    "weapon_ins2m16a4": {
+    "m16a4": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 30,
@@ -385,10 +428,13 @@
             "AIM_FOV": 40,
             "AMMO_TYPE": "ins2_5.56x45mm",
             "AMMO_TYPE2": "ins2_40x46mm",
-            "PROJ_NAME": "proj_ins2m16a4"
+            "PROJ_NAME": "proj_ins2m16a4",
+            "PRICE": 325,
+            "PRICE_AMMO": 30,
+            "PRICE_AMMO_GL": 30
         }
     },
-    "weapon_ins2m14ebr": {
+    "m14ebr": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 20,
@@ -401,10 +447,12 @@
             "RPM_AIR": 710.0,
             "RPM_WTR": 550.0,
             "AIM_FOV": 30,
-            "AMMO_TYPE": "ins2_7.62x51mm"
+            "AMMO_TYPE": "ins2_7.62x51mm",
+            "PRICE": 345,
+            "PRICE_AMMO": 20
         }
     },
-    "weapon_ins2asval": {
+    "asval": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 20,
@@ -417,10 +465,12 @@
             "RPM_AIR": 900.0,
             "RPM_WTR": 750.0,
             "AIM_FOV": 40,
-            "AMMO_TYPE": "ins2_9x39mm"
+            "AMMO_TYPE": "ins2_9x39mm",
+            "PRICE": 230,
+            "PRICE_AMMO": 20
         }
     },
-    "weapon_ins2g3a3": {
+    "g3a3": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 20,
@@ -433,10 +483,12 @@
             "RPM_AIR": 550.0,
             "RPM_WTR": 475.0,
             "AIM_FOV": 40,
-            "AMMO_TYPE": "ins2_7.62x51mm"
+            "AMMO_TYPE": "ins2_7.62x51mm",
+            "PRICE": 335,
+            "PRICE_AMMO": 20
         }
     },
-    "weapon_ins2fnfal": {
+    "fnfal": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 20,
@@ -449,10 +501,12 @@
             "RPM_AIR": 650.0,
             "RPM_WTR": 550.0,
             "AIM_FOV": 40,
-            "AMMO_TYPE": "ins2_7.62x51mm"
+            "AMMO_TYPE": "ins2_7.62x51mm",
+            "PRICE": 330,
+            "PRICE_AMMO": 20
         }
     },
-    "weapon_ins2fg42": {
+    "fg42": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 20,
@@ -465,10 +519,12 @@
             "RPM_AIR": 850.0,
             "RPM_WTR": 675.0,
             "AIM_FOV": 40,
-            "AMMO_TYPE": "ins2_7.92x57mm"
+            "AMMO_TYPE": "ins2_7.92x57mm",
+            "PRICE": 360,
+            "PRICE_AMMO": 35
         }
     },
-    "weapon_ins2usp": {
+    "usp": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 12,
@@ -481,10 +537,12 @@
             "RPM_AIR": 0.135,
             "RPM_WTR": 0.25,
             "AIM_FOV": 49,
-            "AMMO_TYPE": "ins2_45acp"
+            "AMMO_TYPE": "ins2_45acp",
+            "PRICE": 145,
+            "PRICE_AMMO": 10
         }
     },
-    "weapon_ins2an94": {
+    "an94": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 30,
@@ -499,10 +557,12 @@
             "RPM_BURST_AIR": 1600.0,
             "RPM_BURST_WTR": 1000.0,
             "AIM_FOV": 34,
-            "AMMO_TYPE": "ins2_5.45x39mm"
+            "AMMO_TYPE": "ins2_5.45x39mm",
+            "PRICE": 300,
+            "PRICE_AMMO": 30
         }
     },
-    "weapon_ins2c96": {
+    "c96": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 10,
@@ -515,10 +575,12 @@
             "RPM_AIR": 0.135,
             "RPM_WTR": 0.3,
             "AIM_FOV": 49,
-            "AMMO_TYPE": "ins2_7.63x25mm"
+            "AMMO_TYPE": "ins2_7.63x25mm",
+            "PRICE": 175,
+            "PRICE_AMMO": 15
         }
     },
-    "weapon_ins2python": {
+    "python": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 6,
@@ -533,10 +595,12 @@
             "SHOOT_DELAY": 0.1,
             "EMPTY_DELAY": 0.13,
             "AIM_FOV": 49,
-            "AMMO_TYPE": "ins2_357magnum"
+            "AMMO_TYPE": "ins2_357magnum",
+            "PRICE": 180,
+            "PRICE_AMMO": 15
         }
     },
-    "weapon_ins2beretta": {
+    "beretta": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 15,
@@ -549,10 +613,12 @@
             "RPM_AIR": 0.135,
             "RPM_WTR": 0.25,
             "AIM_FOV": 49,
-            "AMMO_TYPE": "ins2_9x19mm"
+            "AMMO_TYPE": "ins2_9x19mm",
+            "PRICE": 130,
+            "PRICE_AMMO": 15
         }
     },
-    "weapon_ins2coach": {
+    "coach": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 2,
@@ -571,10 +637,12 @@
                 0.0349,
                 0.0349,
                 0.0
-            ]
+            ],
+            "PRICE": 295,
+            "PRICE_AMMO": 20
         }
     },
-    "weapon_ins2makarov": {
+    "makarov": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 8,
@@ -587,10 +655,12 @@
             "RPM_AIR": 0.1,
             "RPM_WTR": 0.2,
             "AIM_FOV": 49,
-            "AMMO_TYPE": "ins2_9x18mm"
+            "AMMO_TYPE": "ins2_9x18mm",
+            "PRICE": 100,
+            "PRICE_AMMO": 5
         }
     },
-    "weapon_ins2greasegun": {
+    "greasegun": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 30,
@@ -603,10 +673,12 @@
             "RPM_AIR": 450.0,
             "RPM_WTR": 425.0,
             "AIM_FOV": 45,
-            "AMMO_TYPE": "ins2_45acp"
+            "AMMO_TYPE": "ins2_45acp",
+            "PRICE": 170,
+            "PRICE_AMMO": 25
         }
     },
-    "weapon_ins2mp5sd": {
+    "mp5sd": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 30,
@@ -619,10 +691,12 @@
             "RPM_AIR": 800.0,
             "RPM_WTR": 600.0,
             "AIM_FOV": 45,
-            "AMMO_TYPE": "ins2_9x19mm"
+            "AMMO_TYPE": "ins2_9x19mm",
+            "PRICE": 190,
+            "PRICE_AMMO": 20
         }
     },
-    "weapon_ins2m1928": {
+    "m1928": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 50,
@@ -635,10 +709,12 @@
             "RPM_AIR": 700.0,
             "RPM_WTR": 550.0,
             "AIM_FOV": 45,
-            "AMMO_TYPE": "ins2_45acp"
+            "AMMO_TYPE": "ins2_45acp",
+            "PRICE": 255,
+            "PRICE_AMMO": 50
         }
     },
-    "weapon_ins2l2a3": {
+    "l2a3": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 34,
@@ -651,10 +727,12 @@
             "RPM_AIR": 600.0,
             "RPM_WTR": 475.0,
             "AIM_FOV": 45,
-            "AMMO_TYPE": "ins2_9x19mm"
+            "AMMO_TYPE": "ins2_9x19mm",
+            "PRICE": 195,
+            "PRICE_AMMO": 30
         }
     },
-    "weapon_ins2mp40": {
+    "mp40": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 32,
@@ -667,10 +745,12 @@
             "RPM_AIR": 550.0,
             "RPM_WTR": 450.0,
             "AIM_FOV": 45,
-            "AMMO_TYPE": "ins2_9x19mm"
+            "AMMO_TYPE": "ins2_9x19mm",
+            "PRICE": 185,
+            "PRICE_AMMO": 25
         }
     },
-    "weapon_ins2mp5k": {
+    "mp5k": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 30,
@@ -683,10 +763,12 @@
             "RPM_AIR": 900.0,
             "RPM_WTR": 700.0,
             "AIM_FOV": 45,
-            "AMMO_TYPE": "ins2_9x19mm"
+            "AMMO_TYPE": "ins2_9x19mm",
+            "PRICE": 175,
+            "PRICE_AMMO": 20
         }
     },
-    "weapon_ins2m29": {
+    "m29": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 6,
@@ -700,10 +782,12 @@
             "SHOOT_DELAY": 0.028,
             "EMPTY_DELAY": 0.1,
             "AIM_FOV": 49,
-            "AMMO_TYPE": "ins2_44magnum"
+            "AMMO_TYPE": "ins2_44magnum",
+            "PRICE": 190,
+            "PRICE_AMMO": 20
         }
     },
-    "weapon_ins2akm": {
+    "akm": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 30,
@@ -723,10 +807,13 @@
             "AIM_FOV": 40,
             "AMMO_TYPE": "ins2_7.62x39mm",
             "AMMO_TYPE2": "ins2_40x53mm",
-            "PROJ_NAME": "proj_ins2akm"
+            "PROJ_NAME": "proj_ins2akm",
+            "PRICE": 350,
+            "PRICE_AMMO": 30,
+            "PRICE_AMMO_GL": 30
         }
     },
-    "weapon_ins2groza": {
+    "groza": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 20,
@@ -746,10 +833,13 @@
             "AIM_FOV": 40,
             "AMMO_TYPE": "ins2_9x39mm",
             "AMMO_TYPE2": "ins2_40x53mm",
-            "PROJ_NAME": "proj_ins2groza"
+            "PROJ_NAME": "proj_ins2groza",
+            "PRICE": 320,
+            "PRICE_AMMO": 20,
+            "PRICE_AMMO_GL": 30
         }
     },
-    "weapon_ins2ak74": {
+    "ak74": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 30,
@@ -762,10 +852,12 @@
             "RPM_AIR": 650.0,
             "RPM_WTR": 500.0,
             "AIM_FOV": 40,
-            "AMMO_TYPE": "ins2_5.45x39mm"
+            "AMMO_TYPE": "ins2_5.45x39mm",
+            "PRICE": 285,
+            "PRICE_AMMO": 30
         }
     },
-    "weapon_ins2galil": {
+    "galil": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 35,
@@ -778,10 +870,12 @@
             "RPM_AIR": 650.0,
             "RPM_WTR": 500.0,
             "AIM_FOV": 40,
-            "AMMO_TYPE": "ins2_5.56x45mm"
+            "AMMO_TYPE": "ins2_5.56x45mm",
+            "PRICE": 260,
+            "PRICE_AMMO": 35
         }
     },
-    "weapon_ins2ak12": {
+    "ak12": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 30,
@@ -796,10 +890,12 @@
             "RPM_BURST_AIR": 800.0,
             "RPM_BURST_WTR": 695.0,
             "AIM_FOV": 40,
-            "AMMO_TYPE": "ins2_5.45x39mm"
+            "AMMO_TYPE": "ins2_5.45x39mm",
+            "PRICE": 275,
+            "PRICE_AMMO": 30
         }
     },
-    "weapon_ins2m16a1": {
+    "m16a1": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 20,
@@ -819,10 +915,13 @@
             "AIM_FOV": 40,
             "AMMO_TYPE": "ins2_5.56x45mm",
             "AMMO_TYPE2": "ins2_40x46mm",
-            "PROJ_NAME": "proj_ins2m16a1"
+            "PROJ_NAME": "proj_ins2m16a1",
+            "PRICE": 310,
+            "PRICE_AMMO": 20,
+            "PRICE_AMMO_GL": 30
         }
     },
-    "weapon_ins2mp18": {
+    "mp18": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 32,
@@ -835,10 +934,12 @@
             "RPM_AIR": 450.0,
             "RPM_WTR": 325.0,
             "AIM_FOV": 45,
-            "AMMO_TYPE": "ins2_9x19mm"
+            "AMMO_TYPE": "ins2_9x19mm",
+            "PRICE": 180,
+            "PRICE_AMMO": 15
         }
     },
-    "weapon_ins2m79": {
+    "m79": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 1,
@@ -861,10 +962,13 @@
                 0.07846,
                 0.0
             ],
-            "PROJ_NAME": "proj_ins2m79"
+            "PROJ_NAME": "proj_ins2m79",
+            "PRICE": 450,
+            "PRICE_AMMO": 30,
+            "PRICE_AMMO_GL": 30
         }
     },
-    "weapon_ins2law": {
+    "law": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 1,
@@ -877,10 +981,11 @@
             "POSITION": 9,
             "AIM_FOV": 35,
             "AMMO_TYPE": "GetName()",
-            "PROJ_NAME": "proj_ins2law"
+            "PROJ_NAME": "proj_ins2law",
+            "PRICE": 425
         }
     },
-    "weapon_ins2l85a2": {
+    "l85a2": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 30,
@@ -900,10 +1005,13 @@
             "AIM_FOV": 30,
             "AMMO_TYPE": "ins2_5.56x45mm",
             "AMMO_TYPE2": "ins2_40x46mm",
-            "PROJ_NAME": "proj_ins2l85a2"
+            "PROJ_NAME": "proj_ins2l85a2",
+            "PRICE": 335,
+            "PRICE_AMMO": 30,
+            "PRICE_AMMO_GL": 30
         }
     },
-    "weapon_ins2mk2": {
+    "mk2": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": "WEAPON_NOCLIP",
@@ -915,10 +1023,11 @@
             "POSITION": 5,
             "AMMO_TYPE": "GetName()",
             "TIMER": 4.0,
-            "PROJ_NAME": "proj_ins2mk2"
+            "PROJ_NAME": "proj_ins2mk2",
+            "PRICE": 50
         }
     },
-    "weapon_ins2pzschreck": {
+    "pzschreck": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 1,
@@ -931,10 +1040,12 @@
             "POSITION": 12,
             "AIM_FOV": 45,
             "AMMO_TYPE": "ins2_88mm_rocket",
-            "PROJ_NAME": "proj_ins2pzschreck"
+            "PROJ_NAME": "proj_ins2pzschreck",
+            "PRICE": 700,
+            "PRICE_AMMO": 125
         }
     },
-    "weapon_ins2pzfaust": {
+    "pzfaust": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 1,
@@ -947,10 +1058,11 @@
             "POSITION": 8,
             "AIM_FOV": 35,
             "AMMO_TYPE": "GetName()",
-            "PROJ_NAME": "proj_ins2pzaust"
+            "PROJ_NAME": "proj_ins2pzaust",
+            "PRICE": 400
         }
     },
-    "weapon_ins2deagle": {
+    "deagle": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 7,
@@ -963,10 +1075,12 @@
             "RPM_AIR": 0.155,
             "RPM_WTR": 0.255,
             "AIM_FOV": 49,
-            "AMMO_TYPE": "ins2_50ae"
+            "AMMO_TYPE": "ins2_50ae",
+            "PRICE": 200,
+            "PRICE_AMMO": 25
         }
     },
-    "weapon_ins2at4": {
+    "at4": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 1,
@@ -979,10 +1093,11 @@
             "POSITION": 10,
             "AIM_FOV": 35,
             "AMMO_TYPE": "GetName()",
-            "PROJ_NAME": "proj_ins2at4"
+            "PROJ_NAME": "proj_ins2at4",
+            "PRICE": 450
         }
     },
-    "weapon_ins2rpg7": {
+    "rpg7": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 1,
@@ -995,10 +1110,12 @@
             "POSITION": 11,
             "AIM_FOV": 45,
             "AMMO_TYPE": "ins2_40mm_rocket",
-            "PROJ_NAME": "proj_ins2rpg7"
+            "PROJ_NAME": "proj_ins2rpg7",
+            "PRICE": 600,
+            "PRICE_AMMO": 100
         }
     },
-    "weapon_ins2glock17": {
+    "glock17": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 17,
@@ -1011,10 +1128,12 @@
             "RPM_AIR": 0.125,
             "RPM_WTR": 0.2,
             "AIM_FOV": 49,
-            "AMMO_TYPE": "ins2_9x19mm"
+            "AMMO_TYPE": "ins2_9x19mm",
+            "PRICE": 155,
+            "PRICE_AMMO": 20
         }
     },
-    "weapon_ins2m1911": {
+    "m1911": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 7,
@@ -1027,10 +1146,12 @@
             "RPM_AIR": 0.165,
             "RPM_WTR": 0.265,
             "AIM_FOV": 49,
-            "AMMO_TYPE": "ins2_45acp"
+            "AMMO_TYPE": "ins2_45acp",
+            "PRICE": 110,
+            "PRICE_AMMO": 10
         }
     },
-    "weapon_ins2stick": {
+    "stick": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": "WEAPON_NOCLIP",
@@ -1042,10 +1163,11 @@
             "POSITION": 4,
             "AMMO_TYPE": "GetName()",
             "TIMER": 4.5,
-            "PROJ_NAME": "proj_ins2stick"
+            "PROJ_NAME": "proj_ins2stick",
+            "PRICE": 45
         }
     },
-    "weapon_ins2rgo": {
+    "rgo": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": "WEAPON_NOCLIP",
@@ -1058,10 +1180,11 @@
             "AMMO_TYPE": "GetName()",
             "TIMER": 3.8,
             "IMPACT_TIMER": 1.5,
-            "PROJ_NAME": "proj_ins2rgo"
+            "PROJ_NAME": "proj_ins2rgo",
+            "PRICE": 65
         }
     },
-    "weapon_ins2kabar": {
+    "kabar": {
         "infoBasic": {
             "MAX_CARRY": "-1",
             "MAX_CLIP": "WEAPON_NOCLIP",
@@ -1071,10 +1194,11 @@
             "DAMAGE": 45,
             "SLOT": 0,
             "POSITION": 8,
-            "AMMO_TYPE": ""
+            "AMMO_TYPE": "",
+            "PRICE": 70
         }
     },
-    "weapon_ins2m2": {
+    "m2": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": "WEAPON_NOCLIP",
@@ -1086,10 +1210,12 @@
             "SLOT": 8,
             "POSITION": 4,
             "AMMO_DECAY": 0.09,
-            "AMMO_TYPE": "ins2_napalm"
+            "AMMO_TYPE": "ins2_napalm",
+            "PRICE": 800,
+            "PRICE_AMMO": 60
         }
     },
-    "weapon_ins2knuckles": {
+    "knuckles": {
         "infoBasic": {
             "MAX_CARRY": "-1",
             "MAX_CLIP": "WEAPON_NOCLIP",
@@ -1099,10 +1225,11 @@
             "DAMAGE": 12,
             "SLOT": 0,
             "POSITION": 5,
-            "AMMO_TYPE": ""
+            "AMMO_TYPE": "",
+            "PRICE": 40
         }
     },
-    "weapon_ins2kukri": {
+    "kukri": {
         "infoBasic": {
             "MAX_CARRY": "-1",
             "MAX_CLIP": "WEAPON_NOCLIP",
@@ -1112,10 +1239,11 @@
             "DAMAGE": 50,
             "SLOT": 0,
             "POSITION": 9,
-            "AMMO_TYPE": ""
+            "AMMO_TYPE": "",
+            "PRICE": 90
         }
     },
-    "weapon_ins2aks74u": {
+    "aks74u": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 30,
@@ -1128,10 +1256,12 @@
             "RPM_AIR": 675.0,
             "RPM_WTR": 550.0,
             "AIM_FOV": 40,
-            "AMMO_TYPE": "ins2_5.45x39mm"
+            "AMMO_TYPE": "ins2_5.45x39mm",
+            "PRICE": 235,
+            "PRICE_AMMO": 30
         }
     },
-    "weapon_ins2g36c": {
+    "g36c": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 30,
@@ -1144,10 +1274,12 @@
             "RPM_AIR": 741.0,
             "RPM_WTR": 600.0,
             "AIM_FOV": 40,
-            "AMMO_TYPE": "ins2_5.56x45mm"
+            "AMMO_TYPE": "ins2_5.56x45mm",
+            "PRICE": 250,
+            "PRICE_AMMO": 30
         }
     },
-    "weapon_ins2c96carb": {
+    "c96carb": {
         "infoBasic": {
             "MAX_CARRY": "(INS2BASE::ShouldUseCustomAmmo) ? 1000 : 250",
             "MAX_CLIP": 20,
@@ -1160,10 +1292,12 @@
             "RPM_AIR": 1000.0,
             "RPM_WTR": 700.0,
             "AIM_FOV": 40,
-            "AMMO_TYPE": "ins2_7.63x25mm"
+            "AMMO_TYPE": "ins2_7.63x25mm",
+            "PRICE": 185,
+            "PRICE_AMMO": 30
         }
     },
-    "weapon_ins2m4a1": {
+    "m4a1": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 30,
@@ -1176,10 +1310,12 @@
             "RPM_AIR": 750.0,
             "RPM_WTR": 600.0,
             "AIM_FOV": 40,
-            "AMMO_TYPE": "ins2_5.56x45mm"
+            "AMMO_TYPE": "ins2_5.56x45mm",
+            "PRICE": 245,
+            "PRICE_AMMO": 30
         }
     },
-    "weapon_ins2rpk": {
+    "rpk": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 75,
@@ -1192,10 +1328,12 @@
             "RPM_AIR": 600.0,
             "RPM_WTR": 450.0,
             "AIM_FOV": 40,
-            "AMMO_TYPE": "ins2_7.62x39mm"
+            "AMMO_TYPE": "ins2_7.62x39mm",
+            "PRICE": 485,
+            "PRICE_AMMO": 75
         }
     },
-    "weapon_ins2m1a1para": {
+    "m1a1para": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 15,
@@ -1209,10 +1347,12 @@
             "RPM_AIR": 0.12,
             "RPM_WTR": 0.22,
             "AIM_FOV": 40,
-            "AMMO_TYPE": "ins2_7.62x33mm"
+            "AMMO_TYPE": "ins2_7.62x33mm",
+            "PRICE": 260,
+            "PRICE_AMMO": 20
         }
     },
-    "weapon_ins2mk18": {
+    "mk18": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 30,
@@ -1225,10 +1365,12 @@
             "RPM_AIR": 775.0,
             "RPM_WTR": 700.0,
             "AIM_FOV": 37,
-            "AMMO_TYPE": "ins2_5.56x45mm"
+            "AMMO_TYPE": "ins2_5.56x45mm",
+            "PRICE": 220,
+            "PRICE_AMMO": 30
         }
     },
-    "weapon_ins2lewis": {
+    "lewis": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 47,
@@ -1241,10 +1383,12 @@
             "RPM_AIR": 600.0,
             "RPM_WTR": 500.0,
             "AIM_FOV": 40,
-            "AMMO_TYPE": "ins2_303brit"
+            "AMMO_TYPE": "ins2_303brit",
+            "PRICE": 400,
+            "PRICE_AMMO": 55
         }
     },
-    "weapon_ins2m60": {
+    "m60": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 100,
@@ -1257,10 +1401,12 @@
             "RPM_AIR": 600.0,
             "RPM_WTR": 500.0,
             "AIM_FOV": 40,
-            "AMMO_TYPE": "ins2_7.62x51mm"
+            "AMMO_TYPE": "ins2_7.62x51mm",
+            "PRICE": 540,
+            "PRICE_AMMO": 100
         }
     },
-    "weapon_ins2pkm": {
+    "pkm": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 100,
@@ -1273,10 +1419,12 @@
             "RPM_AIR": 652.0,
             "RPM_WTR": 522.0,
             "AIM_FOV": 40,
-            "AMMO_TYPE": "ins2_7.62x54mm"
+            "AMMO_TYPE": "ins2_7.62x54mm",
+            "PRICE": 950,
+            "PRICE_AMMO": 200
         }
     },
-    "weapon_ins2sks": {
+    "sks": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 20,
@@ -1289,10 +1437,12 @@
             "RPM_AIR": 0.135,
             "RPM_WTR": 0.275,
             "AIM_FOV": 40,
-            "AMMO_TYPE": "ins2_7.62x39mm"
+            "AMMO_TYPE": "ins2_7.62x39mm",
+            "PRICE": 270,
+            "PRICE_AMMO": 25
         }
     },
-    "weapon_ins2m249": {
+    "m249": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 200,
@@ -1305,10 +1455,12 @@
             "RPM_AIR": 775.0,
             "RPM_WTR": 600.0,
             "AIM_FOV": 40,
-            "AMMO_TYPE": "ins2_5.56x45mm"
+            "AMMO_TYPE": "ins2_5.56x45mm",
+            "PRICE": 700,
+            "PRICE_AMMO": 130
         }
     },
-    "weapon_ins2mg34": {
+    "mg34": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 50,
@@ -1321,10 +1473,12 @@
             "RPM_AIR": 820.0,
             "RPM_WTR": 620.0,
             "AIM_FOV": 40,
-            "AMMO_TYPE": "ins2_7.92x57mm"
+            "AMMO_TYPE": "ins2_7.92x57mm",
+            "PRICE": 445,
+            "PRICE_AMMO": 40
         }
     },
-    "weapon_ins2mg42": {
+    "mg42": {
         "infoBasic": {
             "MAX_CARRY": 1000,
             "MAX_CLIP": 250,
@@ -1337,7 +1491,9 @@
             "RPM_AIR": 1200.0,
             "RPM_WTR": 900.0,
             "AIM_FOV": 40,
-            "AMMO_TYPE": "ins2_7.92x57mm"
+            "AMMO_TYPE": "ins2_7.92x57mm",
+            "PRICE": 1000,
+            "PRICE_AMMO": 200
         }
     }
 }

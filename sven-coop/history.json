@@ -77,8 +77,12 @@
             "ccfg": "model hn_purple_heart_a_v2\nname PhantomHorror"
         },
         {
-            "scfg": ".vc voice scientist\n.vc pitch 141\n.hat ricefarmer\n.skin 0\n.color off\n.e off",
+            "scfg": ".vc voice scientist\n.vc pitch 141\n.hat ricefarmer\n.skin 0\n.color off\n.e off\nbind kp_ins \"say CHINA #1 \u5929\u4e0a\u592a\u967d\u7d05\u5440\u7d05\u5f64\u5f64\u8a92\u5fc3\u4e2d\u7684\u592a\u967d\u662f\u6bdb\u6fa4\u6771\u8a92\u4ed6\u9818\u5c0e\u6211\u5011\u5f97\u89e3\u653e\u8a92\u4eba\u6c11\u7ffb\u8eab\u7576\u5bb6\u505a\u4e3b\u4eba\u54bf\u5440\u54bf\u5431\u5466\u9935\u5440\u800c\u5440\u5431\u5466\u554a\u4eba\u6c11\u7ffb\u8eab\u7576\u5bb6\u505a\u4e3b\u4eba\"",
             "ccfg": "model dc_hosung\nname xPeqiHD"
+        },
+        {
+            "scfg": ".vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.e off",
+            "ccfg": "model nekomata2_zinbei_mt\nname LordGoso"
         }
     ]
 }

@@ -1,5 +1,6 @@
 import requests
 import pickle
+import re
 from random import randint
 from os.path import exists
 from os import scandir
@@ -36,7 +37,7 @@ def downloadCS():
         print('Bad response')
         exit(1)
     else:
-        lines = [line.split('\t')[1].split(' ')[0] for line in response.text.splitlines()[3:]]
+        lines = re.findall(r'(?:^\d+\s)([^ ]+)', response.text, re.MULTILINE)
         with open('cs.pkl', 'wb') as f:
             pickle.dump(lines, f)
 
@@ -45,9 +46,7 @@ def downloadCS():
 def convert(filename):
     with open(f'{filename}.txt', 'r') as fr:
         with open(f'{filename}.pkl', 'wb') as fw:
-            # NOTE: replacing with '| ' (not ' | ') because each line has a whitespace before \n
-            names = fr.read().replace('\n', '| ').split(' | ')
-            names.pop() # removing empty string at the end
+            names = re.findall(r'\w+', fr.read(), re.MULTILINE)
             pickle.dump(names, fw)
 
 

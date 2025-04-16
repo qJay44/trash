@@ -116,6 +116,88 @@ filesIns = [
     r'lmg\weapon_ins2mg42.as',
 ]
 
+insCost = {
+    r'svt40': (290, 30),
+    r'mosin': (320, 15),
+    r'm40a1': (305, 10),
+    r'kar98k': (240, 10, 30),
+    r'm21': (350, 20),
+    r'saiga12': (1001, 80), # (725, 80)
+    r'g43': (340, 20),
+    r'webley': (160, 10),
+    r'ump45': (165, 20),
+    r'dragunov': (360, 30),
+    r'garand': (255, 15),
+    r'm590': (285, 50),
+    r'enfield': (270, 20),
+    r'scarh': (350, 20),
+    r'ppsh41': (235, 50),
+    r'stg44': (290, 30),
+    r'vp70': (170, 20),
+    r'm1014': (330, 45),
+    r'mp7': (315, 45),
+    r'f2000': (265, 30),
+    r'ithaca': (275, 40),
+    r'm16a4': (325, 30, 30),
+    r'm14ebr': (345, 20),
+    r'asval': (230, 20),
+    r'g3a3': (335, 20),
+    r'fnfal': (330, 20),
+    r'fg42': (360, 35),
+    r'usp': (145, 10),
+    r'an94': (300, 30),
+    r'c96': (175, 15),
+    r'python': (180, 15),
+    r'beretta': (130, 15),
+    r'coach': (295, 20),
+    r'makarov': (100, 5),
+    r'greasegun': (170, 25),
+    r'mp5sd': (190, 20),
+    r'm1928': (255, 50),
+    r'l2a3': (195, 30),
+    r'mp40': (185, 25),
+    r'mp5k': (175, 20),
+    r'm29': (190, 20),
+    r'akm': (350, 30, 30),
+    r'groza': (320, 20, 30),
+    r'ak74': (285, 30),
+    r'galil': (260, 35),
+    r'ak12': (275, 30),
+    r'm16a1': (310, 20, 30),
+    r'mp18': (180, 15),
+    r'm79': (450, 30, 30),
+    r'law': (425),
+    r'l85a2': (335, 30, 30),
+    r'mk2': (50),
+    r'pzschreck': (700, 125),
+    r'pzfaust': (400),
+    r'deagle': (200, 25),
+    r'at4': (450),
+    r'rpg7': (600, 100),
+    r'glock17': (155, 20),
+    r'm1911': (110, 10),
+    r'stick': (45),
+    r'rgo': (65),
+    r'kabar': (70),
+    r'm2': (800, 60),
+    r'knuckles': (40),
+    r'kukri': (90),
+    r'aks74u': (235, 30),
+    r'g36c': (250, 30),
+    r'c96carb': (185, 30),
+    r'm4a1': (245, 30),
+    r'rpk': (485, 75),
+    r'm1a1para': (260, 20),
+    r'mk18': (220, 30),
+    r'lewis': (400, 55),
+    r'm60': (540, 100),
+    r'pkm': (950, 200),
+    r'sks': (270, 25),
+    r'm249': (700, 130),
+    r'mg34': (445, 40),
+    r'mg42': (1000, 200),
+}
+
 
 def parseFields(lines: list[str]) -> dict[str, str|int]:
     fieldsInfo = {}
@@ -169,7 +251,7 @@ if __name__ == '__main__':
     # CS 1.6 part
     weapons16 = {}
     for file in files16:
-        weapon = file.split('\\')[1][:-3]
+        weapon = file.split('_')[1][:-3]
         weapons16[weapon] = parseFile(rf'{FILES16_ROOT}\{file}')
 
     with open('cs16.json', 'w') as f:
@@ -178,8 +260,20 @@ if __name__ == '__main__':
     # Ins part
     weaponsIns = {}
     for file in filesIns:
-        weapon = file.split('\\')[1][:-3]
+        weapon = file.split('_ins2')[1][:-3]
         weaponsIns[weapon] = parseFile(rf'{FILES_INS_ROOT}\{file}', True)
+
+        wCost = insCost[weapon]
+        wInfo = weaponsIns[weapon]['infoBasic']
+
+        if isinstance(wCost, int):
+            wInfo['PRICE'] = wCost
+        elif len(wCost) >= 2:
+            wInfo['PRICE'] = wCost[0]
+            wInfo['PRICE_AMMO'] = wCost[1]
+            if len(wCost) == 3:
+                wInfo['PRICE_AMMO_GL'] = wCost[2]
+
 
     with open('ins.json', 'w') as f:
         f.write(json.dumps(weaponsIns, indent=4))

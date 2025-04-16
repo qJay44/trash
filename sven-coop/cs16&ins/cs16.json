@@ -1,5 +1,5 @@
 {
-    "weapon_sg552": {
+    "sg552": {
         "infoBasic": {
             "MAX_CARRY": 90,
             "MAX_CLIP": 30,
@@ -22,7 +22,7 @@
             "AMMO_PRICE": 30
         }
     },
-    "weapon_xm1014": {
+    "xm1014": {
         "infoBasic": {
             "MAX_CARRY": 32,
             "MAX_CLIP": 7,
@@ -49,7 +49,7 @@
             "AMMO_PRICE": 15
         }
     },
-    "weapon_csm249": {
+    "csm249": {
         "infoBasic": {
             "MAX_CARRY": 200,
             "MAX_CLIP": 100,
@@ -70,7 +70,7 @@
             "AMMO_PRICE": 100
         }
     },
-    "weapon_hegrenade": {
+    "hegrenade": {
         "infoBasic": {
             "MAX_CARRY": 10,
             "MAX_CLIP": "WEAPON_NOCLIP",
@@ -88,7 +88,7 @@
             "WPN_PRICE": 50
         }
     },
-    "weapon_usp": {
+    "usp": {
         "infoBasic": {
             "MAX_CARRY": 100,
             "MAX_CLIP": 12,
@@ -110,7 +110,7 @@
             "AMMO_PRICE": 10
         }
     },
-    "weapon_sg550": {
+    "sg550": {
         "infoBasic": {
             "MAX_CARRY": 90,
             "MAX_CLIP": 30,
@@ -132,7 +132,7 @@
             "AMMO_PRICE": 30
         }
     },
-    "weapon_famas": {
+    "famas": {
         "infoBasic": {
             "MAX_CARRY": 90,
             "MAX_CLIP": 25,
@@ -154,7 +154,7 @@
             "AMMO_PRICE": 25
         }
     },
-    "weapon_ak47": {
+    "ak47": {
         "infoBasic": {
             "MAX_CARRY": 90,
             "MAX_CLIP": 30,
@@ -175,7 +175,7 @@
             "AMMO_PRICE": 45
         }
     },
-    "weapon_aug": {
+    "aug": {
         "infoBasic": {
             "MAX_CARRY": 90,
             "MAX_CLIP": 30,
@@ -198,7 +198,7 @@
             "AMMO_PRICE": 30
         }
     },
-    "weapon_p228": {
+    "p228": {
         "infoBasic": {
             "MAX_CARRY": 52,
             "MAX_CLIP": 13,
@@ -219,7 +219,7 @@
             "AMMO_PRICE": 15
         }
     },
-    "weapon_galil": {
+    "galil": {
         "infoBasic": {
             "MAX_CARRY": 90,
             "MAX_CLIP": 35,
@@ -240,7 +240,7 @@
             "AMMO_PRICE": 35
         }
     },
-    "weapon_g3sg1": {
+    "g3sg1": {
         "infoBasic": {
             "MAX_CARRY": 90,
             "MAX_CLIP": 20,
@@ -262,7 +262,7 @@
             "AMMO_PRICE": 35
         }
     },
-    "weapon_awp": {
+    "awp": {
         "infoBasic": {
             "MAX_CARRY": 30,
             "MAX_CLIP": 10,
@@ -284,7 +284,7 @@
             "AMMO_PRICE": 30
         }
     },
-    "weapon_m4a1": {
+    "m4a1": {
         "infoBasic": {
             "MAX_CARRY": 90,
             "MAX_CLIP": 30,
@@ -306,7 +306,7 @@
             "AMMO_PRICE": 30
         }
     },
-    "weapon_scout": {
+    "scout": {
         "infoBasic": {
             "MAX_CARRY": 90,
             "MAX_CLIP": 10,
@@ -328,7 +328,7 @@
             "AMMO_PRICE": 20
         }
     },
-    "weapon_csglock18": {
+    "csglock18": {
         "infoBasic": {
             "MAX_CARRY": 120,
             "MAX_CLIP": 20,
@@ -350,7 +350,7 @@
             "AMMO_PRICE": 10
         }
     },
-    "weapon_csknife": {
+    "csknife": {
         "infoBasic": {
             "MAX_CARRY": "-1",
             "MAX_CLIP": "WEAPON_NOCLIP",
@@ -370,7 +370,7 @@
             "WPN_PRICE": 100
         }
     },
-    "weapon_dualelites": {
+    "dualelites": {
         "infoBasic": {
             "MAX_CARRY": 120,
             "MAX_CLIP": 30,
@@ -391,7 +391,7 @@
             "AMMO_PRICE": 15
         }
     },
-    "weapon_c4": {
+    "c4": {
         "infoBasic": {
             "MAX_CARRY": 1,
             "MAX_CLIP": "WEAPON_NOCLIP",
@@ -410,7 +410,7 @@
             "WPN_PRICE": 600
         }
     },
-    "weapon_mp5navy": {
+    "mp5navy": {
         "infoBasic": {
             "MAX_CARRY": 120,
             "MAX_CLIP": 30,
@@ -431,7 +431,7 @@
             "AMMO_PRICE": 15
         }
     },
-    "weapon_m3": {
+    "m3": {
         "infoBasic": {
             "MAX_CARRY": 32,
             "MAX_CLIP": 8,
@@ -458,7 +458,7 @@
             "AMMO_PRICE": 20
         }
     },
-    "weapon_p90": {
+    "p90": {
         "infoBasic": {
             "MAX_CARRY": 100,
             "MAX_CLIP": 50,
@@ -479,7 +479,7 @@
             "AMMO_PRICE": 55
         }
     },
-    "weapon_mac10": {
+    "mac10": {
         "infoBasic": {
             "MAX_CARRY": 100,
             "MAX_CLIP": 30,
@@ -500,7 +500,7 @@
             "AMMO_PRICE": 20
         }
     },
-    "weapon_csdeagle": {
+    "csdeagle": {
         "infoBasic": {
             "MAX_CARRY": 35,
             "MAX_CLIP": 7,
@@ -521,7 +521,7 @@
             "AMMO_PRICE": 15
         }
     },
-    "weapon_fiveseven": {
+    "fiveseven": {
         "infoBasic": {
             "MAX_CARRY": 100,
             "MAX_CLIP": 20,
@@ -542,7 +542,7 @@
             "AMMO_PRICE": 25
         }
     },
-    "weapon_tmp": {
+    "tmp": {
         "infoBasic": {
             "MAX_CARRY": 120,
             "MAX_CLIP": 30,
@@ -563,7 +563,7 @@
             "AMMO_PRICE": 15
         }
     },
-    "weapon_ump45": {
+    "ump45": {
         "infoBasic": {
             "MAX_CARRY": 100,
             "MAX_CLIP": 25,
