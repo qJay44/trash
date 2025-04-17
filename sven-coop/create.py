@@ -1,15 +1,6 @@
 from random import choice, randint
-from config import COLORNAMES, TRAIL_PALETTES, TRAIL_SPRITES, VC_NAMES, MODELS, NICKNAMES, HATS, KING_CFG_PATH, MY_CFG_PATH
-import json
-
-tcolorname = choice(COLORNAMES)
-tpalette = choice(TRAIL_PALETTES)
-tsprite = choice(TRAIL_SPRITES)
-voice = choice(VC_NAMES).name[:-7]
-model = choice(MODELS).name
-name = choice(NICKNAMES)
-hat = choice(HATS)
-pitch = randint(60, 150)
+from config import COLORNAMES, TRAIL_PALETTES, TRAIL_SPRITES, VC_NAMES, HATS, KING_CFG_PATH, MY_CFG_PATH
+import history
 
 
 def create() -> tuple[str, str]:
@@ -17,17 +8,21 @@ def create() -> tuple[str, str]:
 
     # Server config
     scfg = \
-        roll(f'say trail {tcolorname} {tsprite}\n') + \
-        roll(f'.trail {tpalette}\n') + \
-        f'.vc voice {roll(voice, 'scientist')}\n' + \
-        f'.vc pitch {roll(pitch, 100)}\n' + \
-        f'.hat {roll(hat, 'off')}\n'  + \
+        'exec clear.cfg\n' + \
+        roll(f'say trail {choice(COLORNAMES)} {choice(TRAIL_SPRITES)}\n') + \
+        roll(f'.trail {choice(TRAIL_PALETTES)}\n') + \
+        f'.vc voice {roll(choice(VC_NAMES).name[:-7], 'scientist')}\n' + \
+        f'.vc pitch {roll(randint(40, 200), 100)}\n' + \
+        f'.hat {roll(choice(HATS), 'off')}\n'  + \
         f'.skin {roll(-2, 0)}\n' + \
-        '.color off\n' + \
-        '.e off'
+        f'.color {roll(choice(['r', 'g', 'b', 'y']), 'off')}'
 
     # Client config
-    ccfg = f'model {model}\nname {name}'
+    ccfg = \
+        f'model {history.choose('models')}\n' + \
+        f'name {history.choose('names')}\n' + \
+        f'topcolor {randint(0, 255)}\n' + \
+        f'bottomcolor {randint(0, 255)}'
 
     return (scfg, ccfg)
 
@@ -39,12 +34,7 @@ def apply(scfg: str, ccfg: str) -> None:
     with open(MY_CFG_PATH, 'w', encoding='utf-8') as f:
         f.write(ccfg)
 
-    # Save cfgs to history.json
-    with open('history.json', 'r+', encoding='utf-8') as f:
-        data = json.load(f)
-        data['cfgs'].append({'scfg': scfg, 'ccfg': ccfg})
-        f.seek(0)
-        json.dump(data, f, indent=4)
+    history.write(scfg, ccfg)
 
 
 if __name__ == '__main__':
@@ -52,4 +42,6 @@ if __name__ == '__main__':
     apply(scfg, ccfg)
 
     print(f'{scfg}\n\n{ccfg}')
+    print(f'models left: {history.length['models']}')
+    print(f'names left: {history.length['names']}')
 

@@ -83,6 +83,18 @@
         {
             "scfg": ".vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.e off",
             "ccfg": "model nekomata2_zinbei_mt\nname LordGoso"
+        },
+        {
+            "scfg": "exec clear.cfg\n.trail neonpunk\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off",
+            "ccfg": "model angelina\nname raven\ntopcolor 49\nbottomcolor 47"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat camohat\n.skin 0\n.color off",
+            "ccfg": "model dark_spy\nname BrabantGamer\ntopcolor 229\nbottomcolor 22"
+        },
+        {
+            "scfg": "exec clear.cfg\n.trail light\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off",
+            "ccfg": "model re4zomb_nb\nname MrGrayShark\ntopcolor 181\nbottomcolor 168"
         }
     ]
 }
