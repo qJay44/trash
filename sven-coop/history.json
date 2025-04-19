@@ -95,6 +95,18 @@
         {
             "scfg": "exec clear.cfg\n.trail light\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off",
             "ccfg": "model re4zomb_nb\nname MrGrayShark\ntopcolor 181\nbottomcolor 168"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin -2\n.color off",
+            "ccfg": "model allied5_s5\nname FightsAlot\ntopcolor 152\nbottomcolor 42"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 87\n.hat off\n.skin 0\n.color off",
+            "ccfg": "model tfcengineer2_v2\nname chookiegirl02\ntopcolor 74\nbottomcolor 235"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat afro\n.skin 0\n.color b",
+            "ccfg": "model ija_gunner\nname LDK2\ntopcolor 32\nbottomcolor 51"
         }
     ]
 }

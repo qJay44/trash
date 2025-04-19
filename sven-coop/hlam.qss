@@ -1,0 +1,43 @@
+QWidget {
+  background: rgb(30, 30, 30);
+  color: rgb(200, 200, 200);
+}
+
+QMenuBar {
+  background: rgb(50, 50, 50);
+  color: rgb(200, 200, 200);
+}
+
+QMenuBar::item:selected {
+  background-color: rgb(90, 90, 90);
+  color: rgb(220, 220, 220);
+}
+
+QTabBar::tab {
+  background: rgb(50, 50, 50);
+  color: rgb(200, 200, 200);
+}
+
+QTabBar::tab:selected {
+  background: rgb(70, 70, 70);
+  color: rgb(230, 230, 230);
+}
+
+QComboBox#Sequences {
+  font-size: 16px;
+  color: rgb(255, 159, 0);
+  selection-background-color: rgba(0, 0, 0, 0);
+  selection-color: rgb(255, 159, 0);
+}
+
+QComboBox#Sequences:selected {
+  border: 1px solid rgb(255, 159, 0);
+  font-size: 16px;
+}
+
+QPushButton#PreviousFrame     { background: rgb(90, 90, 90); }
+QPushButton#SkipFramesEarlier { background: rgb(90, 90, 90); }
+QPushButton#TogglePlayback    { background: rgb(90, 90, 90); }
+QPushButton#SkipFramesLater   { background: rgb(90, 90, 90); }
+QPushButton#NextFrame         { background: rgb(90, 90, 90); }
+

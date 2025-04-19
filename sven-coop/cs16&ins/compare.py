@@ -1,4 +1,5 @@
 import json
+from sys import argv
 
 ANSI_GREEN_HIGH = '\033[0;92m'
 ANSI_RED_HIGH = '\033[0;91m'
@@ -50,5 +51,8 @@ def compare(weaponsJson: str, name1: str, name2: str) -> None:
 
 
 if __name__ == '__main__':
-    compare('ins.json', 'dragunov', 'm21')
+    if (len(argv) == 4):
+        compare(f'{argv[1]}.json', argv[2], argv[3])
+    else:
+        print('Use ex.: python compare.py ins dragunov m21')
 

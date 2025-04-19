@@ -13,7 +13,7 @@ def create() -> tuple[str, str]:
         roll(f'.trail {choice(TRAIL_PALETTES)}\n') + \
         f'.vc voice {roll(choice(VC_NAMES).name[:-7], 'scientist')}\n' + \
         f'.vc pitch {roll(randint(40, 200), 100)}\n' + \
-        f'.hat {roll(choice(HATS), 'off')}\n'  + \
+        f'.hat {roll(choice(HATS), 'off', 25)}\n'  + \
         f'.skin {roll(-2, 0)}\n' + \
         f'.color {roll(choice(['r', 'g', 'b', 'y']), 'off')}'
 
