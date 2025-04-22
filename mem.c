@@ -1,3 +1,5 @@
+// https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-globalmemorystatusex
+
 #include <windows.h>
 #include <stdio.h>
 
@@ -11,11 +13,8 @@ int main() {
   float physInUse = statex.ullTotalPhys - statex.ullAvailPhys;
 
   int i;
-  for (i = 0; i < 4; i++)
-    if (physInUse >= 1000)
-      physInUse /= 1024;
-    else
-      break;
+  for (i = 0; i < 4 && physInUse >= 1000; i++)
+    physInUse /= 1024;
 
   printf("%.2f %s", physInUse, units[i]);
 
