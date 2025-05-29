@@ -77,8 +77,8 @@
             "ccfg": "model hn_purple_heart_a_v2\nname PhantomHorror"
         },
         {
-            "scfg": ".vc voice scientist\n.vc pitch 141\n.hat ricefarmer\n.skin 0\n.color off\n.e off\nbind kp_ins \"say CHINA #1 \u5929\u4e0a\u592a\u967d\u7d05\u5440\u7d05\u5f64\u5f64\u8a92\u5fc3\u4e2d\u7684\u592a\u967d\u662f\u6bdb\u6fa4\u6771\u8a92\u4ed6\u9818\u5c0e\u6211\u5011\u5f97\u89e3\u653e\u8a92\u4eba\u6c11\u7ffb\u8eab\u7576\u5bb6\u505a\u4e3b\u4eba\u54bf\u5440\u54bf\u5431\u5466\u9935\u5440\u800c\u5440\u5431\u5466\u554a\u4eba\u6c11\u7ffb\u8eab\u7576\u5bb6\u505a\u4e3b\u4eba\"",
-            "ccfg": "model dc_hosung\nname xPeqiHD"
+            "scfg": ".vc voice scientist\n.vc pitch 141\n.hat ricefarmer\n.skin 0\n.color off\n.e off",
+            "ccfg": "model dc_hosung\nname xPeqiHD\nbind kp_ins \"say CHINA #1 \u5929\u4e0a\u592a\u967d\u7d05\u5440\u7d05\u5f64\u5f64\u8a92\u5fc3\u4e2d\u7684\u592a\u967d\u662f\u6bdb\u6fa4\u6771\u8a92\u4ed6\u9818\u5c0e\u6211\u5011\u5f97\u89e3\u653e\u8a92\u4eba\u6c11\u7ffb\u8eab\u7576\u5bb6\u505a\u4e3b\u4eba\u54bf\u5440\u54bf\u5431\u5466\u9935\u5440\u800c\u5440\u5431\u5466\u554a\u4eba\u6c11\u7ffb\u8eab\u7576\u5bb6\u505a\u4e3b\u4eba\""
         },
         {
             "scfg": ".vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.e off",
@@ -107,6 +107,74 @@
         {
             "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat afro\n.skin 0\n.color b",
             "ccfg": "model ija_gunner\nname LDK2\ntopcolor 32\nbottomcolor 51"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 81\n.hat off\n.skin 0\n.color off",
+            "ccfg": "model tmcm\nname Star_meteor\ntopcolor 114\nbottomcolor 255"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off",
+            "ccfg": "model sonicshadow_v2\nname ChebMaster17\ntopcolor 246\nbottomcolor 186"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off",
+            "ccfg": "model mask\nname Rafa0203\ntopcolor 120\nbottomcolor 147"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat camohat\n.skin 0\n.color off",
+            "ccfg": "model cof_police4\nname Hajival\ntopcolor 74\nbottomcolor 196\nbind , \".e 191 loop 1\"\nbind . \".e 192 loop 1\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off",
+            "ccfg": "model 2d_kz_neruu\nname xFNTASTEKx\ntopcolor 160\nbottomcolor 229"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat tweedle\n.skin 0\n.color off",
+            "ccfg": "model cive\nname kndrc\ntopcolor 189\nbottomcolor 120"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off",
+            "ccfg": "model urban\nname jeremy91410\ntopcolor 159\nbottomcolor 180"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off",
+            "ccfg": "model kof_goenitz96\nname KillerSpringtrap\ntopcolor 226\nbottomcolor 95"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat ricefarmer\n.skin 0\n.color off",
+            "ccfg": "model wanted_rogan\nname kenzie1095\ntopcolor 150\nbottomcolor 196"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice agathaknight\n.vc pitch 100\n.hat off\n.skin 0\n.color off",
+            "ccfg": "model para_elektrik4\nname _xxGamerBroxx_\ntopcolor 133\nbottomcolor 238"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off",
+            "ccfg": "model trip\nname JonnhyBr\ntopcolor 112\nbottomcolor 69"
+        },
+        {
+            "scfg": "exec clear.cfg\n.trail pastel\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color g",
+            "ccfg": "model oldgordon_deaged\nname big12_boss\ntopcolor 211\nbottomcolor 125"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat angel2\n.skin 0\n.color off",
+            "ccfg": "model hl2_alyx_v2\nname IPvPTillDeath\ntopcolor 90\nbottomcolor 50"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 131\n.hat off\n.skin 0\n.color off",
+            "ccfg": "model deathscythehell\nname XlaitGaming\ntopcolor 103\nbottomcolor 108"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off",
+            "ccfg": "model dainippon1\nname ScorplayZ\ntopcolor 34\nbottomcolor 43"
+        },
+        {
+            "scfg": "exec clear.cfg\nsay trail darkyellow point\n.trail wheel\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off",
+            "ccfg": "model bananaboy_v2\nname NoahLifer\ntopcolor 254\nbottomcolor 144"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off",
+            "ccfg": "model sniper2\nname jejecrafting\ntopcolor 46\nbottomcolor 95"
         }
     ]
 }
