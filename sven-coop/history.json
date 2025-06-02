@@ -175,6 +175,18 @@
         {
             "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off",
             "ccfg": "model sniper2\nname jejecrafting\ntopcolor 46\nbottomcolor 95"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice jcdenton\n.vc pitch 100\n.hat off\n.skin 0\n.color off",
+            "ccfg": "model pzangoosenf\nname amgb02\ntopcolor 204\nbottomcolor 109"
+        },
+        {
+            "scfg": "exec clear.cfg\nsay trail sky interlace\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin -2\n.color off",
+            "ccfg": "model coldburn_hhev_v2\nname DanilYurich\ntopcolor 154\nbottomcolor 84"
+        },
+        {
+            "scfg": "exec clear.cfg\nsay trail darkishgreen lightning\n.vc voice scientist\n.vc pitch 100\n.hat randoseru\n.skin 0\n.color off",
+            "ccfg": "model plutia02_mazz_v2\nname DummieGamez\ntopcolor 133\nbottomcolor 234"
         }
     ]
 }
