@@ -1,3 +1,8 @@
+@echo off
+setlocal enabledelayedexpansion
+
+rem Get the escape character
+for /f "delims=" %%A in ('echo prompt $E^| cmd') do set "ESC=%%A"
 
 set LIBS=C:/Users/q44/Documents/Libs
 set PROJ_ROOT=%LIBS%/proj-9.6.1/build/install
@@ -13,32 +18,38 @@ cd build
 cmake .. ^
 -DCMAKE_BUILD_TYPE=Release ^
 -DCMAKE_INSTALL_PREFIX=install ^
--DCMAKE_PREFIX_PATH=%PROJ_ROOT%;%TIFF_ROOT%;%SQLite3_ROOT%;%CURL_ROOT% ^
--DPROJ_INCLUDE_DIR=%PROJ_ROOT%/include ^
--DPROJ_LIBRARY_RELEASE=%PROJ_ROOT%/lib/libproj.dll.a ^
+-DCMAKE_PREFIX_PATH=%PROJ_ROOT%;%TIFF_ROOT%;%SQLite3_ROOT%;%CURL_ROOT%;%ZLIB_ROOT%;%PNG_ROOT% ^
 -DGDAL_USE_TIFF=ON ^
--DTIFF_INCLUDE_DIR=%TIFF_ROOT%/include ^
--DTIFF_LIBRARY_RELEASE=%TIFF_ROOT%/lib/tiff.lib ^
 -DGDAL_USE_SQLITE3=ON ^
--DSQLite3_INCLUDE_DIR=%SQLite3_ROOT% ^
--DSQLite3_LIBRARY=%SQLite3_ROOT%/libsqlite3.a ^
 -DGDAL_USE_CURL=ON ^
--DCURL_INCLUDE_DIR=%CURL_ROOT%/include ^
--DCURL_LIBRARY=%CURL_ROOT%/lib/libcurl.dll.a ^
 -DGDAL_USE_ZLIB=ON ^
--DZLIB_INCLUDE_DIR=%ZLIB_ROOT%/include ^
--DZLIB_LIBRARY_RELEASE=%ZLIB_ROOT%/lib/libzlib.dll.a ^
--DGDAL_USE_PNG=ON ^
--DPNG_INCLUDE_DIR=%PNG_ROOT%/include ^
--DPNG_LIBRARY_RELEASE=%PNG_ROOT%/lib/libpng16.dll.a ^
+-DGDAL_USE_PNG=ON
 
-rem cmake --build . --target install
+if %ERRORLEVEL% neq 0 (
+	rem Print bright red text
+	echo !ESC![91mCMake configuration failed !ESC!
+	rem Reset formatting explicitly at end of script
+	echo !ESC![0m
+    exit /b %ERRORLEVEL%
+)
 
-REM echo n | copy /-y %CURL_ROOT%/bin/libcurl-x64.dll install/bin
-REM echo n | copy /-y %PROJ_ROOT%/bin/libproj_9.dll install/bin
-REM echo n | copy /-y %TIFF_ROOT%/bin/libtiff.dll install/bin
-REM echo n | copy /-y %ZLIB_ROOT%/bin/libzlib.dll install/bin
-REM echo n | copy /-y %PNG_ROOT%/lib/libpng16.dll install/bin
+cmake --build . --target install
+
+if %ERRORLEVEL% neq 0 (
+	rem Print bright red text
+	echo !ESC![91mCMake configuration failed !ESC!
+	rem Reset formatting explicitly at end of script
+	echo !ESC![0m
+    exit /b %ERRORLEVEL%
+)
+
+echo n | copy /-y %CURL_ROOT%/bin/libcurl-x64.dll install/bin
+echo n | copy /-y %PROJ_ROOT%/bin/libproj_9.dll install/bin
+echo n | copy /-y %TIFF_ROOT%/bin/libtiff.dll install/bin
+echo n | copy /-y %ZLIB_ROOT%/bin/libzlib.dll install/bin
+echo n | copy /-y %PNG_ROOT%/lib/libpng16.dll install/bin
 
 cd ..
+endlocal
 pause
+
