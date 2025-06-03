@@ -187,6 +187,10 @@
         {
             "scfg": "exec clear.cfg\nsay trail darkishgreen lightning\n.vc voice scientist\n.vc pitch 100\n.hat randoseru\n.skin 0\n.color off",
             "ccfg": "model plutia02_mazz_v2\nname DummieGamez\ntopcolor 133\nbottomcolor 234"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off",
+            "ccfg": "model ctf_flanker\nname Xeizez\ntopcolor 175\nbottomcolor 1"
         }
     ]
 }
