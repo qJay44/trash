@@ -3,7 +3,6 @@ set LIBS="C:/Users/q44/Documents/Libs"
 
 if not exist build mkdir build
 cd build
-if not exist install mkdir install
 
 cmake .. ^
 -DCMAKE_INSTALL_PREFIX="install" ^
@@ -19,6 +18,10 @@ cmake .. ^
 -DCURL_LIBRARY="%LIBS%/curl-8.14.0_1-win64-mingw/lib/libcurl.dll.a"
 
 cmake --build . --target install
+
+echo n | copy /-y C:/Users/q44/Documents/Libs/curl-8.14.0_1-win64-mingw/bin/libcurl-x64.dll install/bin
+echo n | copy /-y C:/Users/q44/Documents/Libs/proj-9.6.0/build/install/bin/libproj_9.dll install/bin
+echo n | copy /-y C:/Users/q44/Documents/Libs/tiff-4.7.0/build/install/bin/libtiff.dll install/bin
 
 cd ..
 pause
