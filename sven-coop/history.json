@@ -191,6 +191,34 @@
         {
             "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off",
             "ccfg": "model ctf_flanker\nname Xeizez\ntopcolor 175\nbottomcolor 1"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off",
+            "ccfg": "model shippudden_gaara\nname BLAISE250\ntopcolor 229\nbottomcolor 192"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin -2\n.color off",
+            "ccfg": "model elfarcherfa\nname MeTaLBoYxX\ntopcolor 27\nbottomcolor 105"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat clocknecklace\n.skin 0\n.color off\n.brapcolor 255 255 255",
+            "ccfg": "model chupetin\nname PugBoss\ntopcolor 230\nbottomcolor 181"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.brapcolor 8 173 205",
+            "ccfg": "model kz_yosafire\nname \"who plays\"\ntopcolor 80\nbottomcolor 50"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat wehrmacht2\n.skin 0\n.color off\n.brapcolor 255 241 188",
+            "ccfg": "model rowantree\nname \"standard \"Blue Bossa\"\"\ntopcolor 252\nbottomcolor 224"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.brapcolor 27 168 213",
+            "ccfg": "model nva\nname \"Republic of China. It\"\ntopcolor 236\nbottomcolor 22"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice ellisl4d\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.brapcolor 152 33 233",
+            "ccfg": "model ooka_miko_2nd\nname \"the mid-1890s. The\"\ntopcolor 244\nbottomcolor 104"
         }
     ]
 }

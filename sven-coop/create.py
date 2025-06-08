@@ -17,12 +17,13 @@ def create() -> tuple[str, str]:
         f'.vc pitch {roll(randint(1, 255), 100)}\n' + \
         f'.hat {roll(choice(HATS), 'off', 25)}\n'  + \
         f'.skin {roll(-2, 0)}\n' + \
-        f'.color {roll(choice(['r', 'g', 'b', 'y']), 'off')}'
+        f'.color {roll(choice(['r', 'g', 'b', 'y']), 'off')}\n' + \
+        f'.brapcolor {randint(0, 255)} {randint(0, 255)} {randint(0, 255)}'
 
     # Client config
     ccfg = \
         f'model {history.choose('models')}\n' + \
-        f'name {roll(_fromWikipedia(), history.choose('names'))}\n' + \
+        f'name {roll(_fromWikipedia(), history.choose('names'), 33)}\n' + \
         f'topcolor {randint(0, 255)}\n' + \
         f'bottomcolor {randint(0, 255)}'
 
@@ -43,9 +44,11 @@ def _fromWikipedia():
     else:
         words = response.json()['extract'].split(' ');
         startIdx = randint(0, len(words) - 1);
-        endIdx = randint(startIdx, startIdx + 2);
+        endIdx = randint(startIdx, startIdx + 5);
+        name = " ".join(words[startIdx:endIdx + 1])
+        name.replace('"', '')
 
-        return " ".join(words[startIdx:endIdx])
+        return f'\"{name}\"'
 
 
 def apply(scfg: str, ccfg: str) -> None:
