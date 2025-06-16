@@ -219,6 +219,42 @@
         {
             "scfg": "exec clear.cfg\n.vc voice ellisl4d\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.brapcolor 152 33 233",
             "ccfg": "model ooka_miko_2nd\nname \"the mid-1890s. The\"\ntopcolor 244\nbottomcolor 104"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat tutu\n.skin 0\n.color off\n.brapcolor 12 182 66",
+            "ccfg": "model bm_hgrunt_masked\nname Jente_KRDJ\ntopcolor 204\nbottomcolor 207"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color y\n.brapcolor 207 245 164",
+            "ccfg": "model koneko_chan_beta\nname stosiic\ntopcolor 115\nbottomcolor 60"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.brapcolor 118 172 95",
+            "ccfg": "model sephiroth_v2\nname dudaduda5\ntopcolor 74\nbottomcolor 48"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.brapcolor 131 199 188",
+            "ccfg": "model nam_shadow\nname Flamingskull9\ntopcolor 124\nbottomcolor 191"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.brapcolor 227 241 70",
+            "ccfg": "model nekomimi_bikini2\nname JA_Moulinex\ntopcolor 210\nbottomcolor 80"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.brapcolor 37 119 223",
+            "ccfg": "model jason2\nname \"NCAA Division I-A football\"\ntopcolor 130\nbottomcolor 159"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.brapcolor 30 81 190",
+            "ccfg": "model zealot\nname Binky214\ntopcolor 118\nbottomcolor 93"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice gabrielangelos\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.brapcolor 114 20 107",
+            "ccfg": "model haloonered\nname 1amJustASwine\ntopcolor 59\nbottomcolor 79"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 208\n.hat off\n.skin 0\n.color off\n.brapcolor 193 59 4",
+            "ccfg": "model nekomata_casual_v2\nname BlahPlayer\ntopcolor 129\nbottomcolor 96"
         }
     ]
 }

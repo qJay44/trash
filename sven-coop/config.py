@@ -25,6 +25,10 @@ HATS = ['afro', 'angel2', 'angelhead', 'anticross', 'arrow', 'autism', 'aviators
 PETS = ['aliengrunt', 'archer', 'babyheadcrab', 'bigmomma', 'bullsquid', 'chatarou', 'chumtoad', 'cockroach', 'controller', 'dog', 'floater', 'gargantua',
         'gura', 'headcrab', 'hk416', 'houndeye', 'karen', 'loader', 'miketama', 'pizzashopowner', 'rat', 'skeleton', 'stukabat', 'touhou_chen', 'xenbat']
 
+VC_VOICES = ['Mute', 'AgathaKnight', 'AL_Ayanami', 'AL_Nagato', 'Ark_Lappland', 'Ark_Texas', 'Arnold_Schwarzenegger', 'BA_Ako', 'BA_Arisu',
+             'BA_Arona', 'BA_Aru', 'BA_Ayane', 'BA_Chinatsu', 'BA_Haruka', 'BA_Hina', 'BA_Hoshino', 'BA_Iori', 'BA_Kayoko', 'BA_Koyuki',
+             'BA_Midori', 'BA_Miyako', 'BA_Miyu', 'BA_Moe']
+
 TRAIL_SPRITES = ['arrows', 'fatline', 'interlace', 'lightning', 'point', 'smokey', 'squarewave', 'svenlogo', 'thinline', 'voice']
 
 TRAIL_PALETTES = ['anime', 'beach', 'cyberpunk', 'forest', 'goldfish', 'interceptor', 'intersex', 'lgbt', 'light', 'random',

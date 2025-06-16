@@ -51,19 +51,21 @@ def _fromWikipedia():
         return f'\"{name}\"'
 
 
-def apply(scfg: str, ccfg: str) -> None:
+def apply(scfg: str, ccfg: str, addToHistory: bool = True) -> None:
     with open(KING_CFG_PATH, 'w', encoding='utf-8') as f:
         f.write(scfg)
 
     with open(MY_CFG_PATH, 'w', encoding='utf-8') as f:
         f.write(ccfg)
-
-    history.write(scfg, ccfg)
+    
+    if (addToHistory):
+        history.write(scfg, ccfg)
 
 
 if __name__ == '__main__':
-    scfg, ccfg = _pick() if randint(1, 100) == 1 else create()
-    apply(scfg, ccfg)
+    fromHistory = randint(1, 100) == 1
+    scfg, ccfg = _pick() if fromHistory else create()
+    apply(scfg, ccfg, not fromHistory)
 
     print(f'{scfg}\n\n{ccfg}\n')
     print(f'models left: {history.length['models']}')
