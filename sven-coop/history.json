@@ -255,6 +255,10 @@
         {
             "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 208\n.hat off\n.skin 0\n.color off\n.brapcolor 193 59 4",
             "ccfg": "model nekomata_casual_v2\nname BlahPlayer\ntopcolor 129\nbottomcolor 96"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat fox_hat_b\n.skin 0\n.color off\n.brapcolor 120 50 147",
+            "ccfg": "model aresaka\nname zelfriyanno\ntopcolor 65\nbottomcolor 78"
         }
     ]
 }
