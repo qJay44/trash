@@ -259,6 +259,110 @@
         {
             "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat fox_hat_b\n.skin 0\n.color off\n.brapcolor 120 50 147",
             "ccfg": "model aresaka\nname zelfriyanno\ntopcolor 65\nbottomcolor 78"
+        },
+        {
+            "scfg": "exec clear.cfg\nsay trail rosepink point\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.brapcolor 43 55 112",
+            "ccfg": "model low_gonome\nname ByWolfi\ntopcolor 85\nbottomcolor 25"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.brapcolor 242 4 179",
+            "ccfg": "model musclebase\nname \"The church of St Andrew's,\"\ntopcolor 120\nbottomcolor 199"
+        },
+        {
+            "scfg": "exec clear.cfg\nsay trail pine fatline\n.vc voice scientist\n.vc pitch 100\n.hat inosuke\n.skin 0\n.color off\n.brapcolor 119 223 13",
+            "ccfg": "model re3_dario\nname Connerdisciple3\ntopcolor 73\nbottomcolor 96"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.brapcolor 123 8 159",
+            "ccfg": "model halooneteal\nname enderpig09\ntopcolor 183\nbottomcolor 233"
+        },
+        {
+            "scfg": "exec clear.cfg\n.trail lgbt\n.vc voice scientist\n.vc pitch 100\n.hat sumbraro2\n.skin 0\n.color r\n.brapcolor 97 188 57",
+            "ccfg": "model terror3\nname \"Beach is\"\ntopcolor 102\nbottomcolor 0"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat cross\n.skin 0\n.color off\n.brapcolor 231 93 53",
+            "ccfg": "model kookos\nname willnacho\ntopcolor 96\nbottomcolor 131"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.brapcolor 90 146 147",
+            "ccfg": "model holo_okayu_lowpoly\nname \"the John\"\ntopcolor 127\nbottomcolor 148"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color r\n.brapcolor 69 110 45",
+            "ccfg": "model spiderman_v1\nname _DerpyTurtle\ntopcolor 176\nbottomcolor 169"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.brapcolor 140 213 46",
+            "ccfg": "model gf_super_sass_nude_1\nname \"Hearst in 1931. It merged\"\ntopcolor 37\nbottomcolor 61"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.brapcolor 98 180 85",
+            "ccfg": "model mb56\nname \"community of Llawhaden and about\"\ntopcolor 245\nbottomcolor 198"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.brapcolor 71 202 48",
+            "ccfg": "model kz_megumi_v2\nname SpycatAlej\ntopcolor 252\nbottomcolor 171"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat inosuke\n.skin 0\n.color off\n.brapcolor 181 189 213",
+            "ccfg": "model opfor_medic_v3\nname \"Congolese writer\" of the Democratic\"\ntopcolor 44\nbottomcolor 207"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.brapcolor 133 16 144",
+            "ccfg": "model aamedic_bf2\nname \"has achieved widespread populari\"\ntopcolor 42\nbottomcolor 155"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.brapcolor 127 6 188",
+            "ccfg": "model his_royal_guardian\nname SaltyBolts\ntopcolor 38\nbottomcolor 106"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin -2\n.color off\n.brapcolor 21 195 182",
+            "ccfg": "model 2d_km_karenkujo_alt\nname \"a\"\ntopcolor 141\nbottomcolor 129"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat chef\n.skin 0\n.color b\n.brapcolor 173 219 54",
+            "ccfg": "model gw_real_latino_v2\nname \"included an attack by\"\ntopcolor 167\nbottomcolor 110"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.brapcolor 11 16 75",
+            "ccfg": "model audie\nname \"2010\"\ntopcolor 137\nbottomcolor 97"
+        },
+        {
+            "scfg": "exec clear.cfg\nsay trail winered arrows\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color y\n.brapcolor 220 67 170",
+            "ccfg": "model sc_helmet_v2\nname KingLegoman\ntopcolor 45\nbottomcolor 145"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 60\n.hat off\n.skin 0\n.color g\n.brapcolor 221 63 15",
+            "ccfg": "model barneyzombie\nname \"is headquartered in Goyang\"\ntopcolor 12\nbottomcolor 53"
+        },
+        {
+            "scfg": "exec clear.cfg\nsay trail springgreen thinline\n.vc voice nagatoro\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.brapcolor 36 121 67",
+            "ccfg": "model sp_arabianmiku_black\nname \"Illinois, USA.\"\ntopcolor 162\nbottomcolor 15"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.brapcolor 204 228 66",
+            "ccfg": "model meatwall\nname \"the Dordogne\"\ntopcolor 186\nbottomcolor 115"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat santahat\n.skin 0\n.color off\n.brapcolor 141 148 161",
+            "ccfg": "model terryman\nname \"is a municipality located in the\"\ntopcolor 98\nbottomcolor 100"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 27\n.hat off\n.skin 0\n.color off\n.brapcolor 239 235 208",
+            "ccfg": "model hevmiku\nname Aporedschuhregal\ntopcolor 148\nbottomcolor 89"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 246\n.hat off\n.skin 0\n.color off\n.brapcolor 58 69 195",
+            "ccfg": "model foxprvtr\nname killagodzilla123\ntopcolor 84\nbottomcolor 218"
+        },
+        {
+            "scfg": "exec clear.cfg\nsay trail robineggblue squarewave\n.vc voice scientist\n.vc pitch 198\n.hat off\n.skin 0\n.color off\n.brapcolor 217 17 1",
+            "ccfg": "model dark_spy_v2\nname RushBedWars\ntopcolor 33\nbottomcolor 139"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 192\n.hat off\n.skin 0\n.color off\n.brapcolor 77 108 169",
+            "ccfg": "model -agent_onna-_v2\nname THE_ARR0W\ntopcolor 113\nbottomcolor 109"
         }
     ]
 }
