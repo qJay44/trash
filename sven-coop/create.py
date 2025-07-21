@@ -24,7 +24,8 @@ def create() -> tuple[str, str]:
         f'model {history.choose('models')}\n' + \
         f'name {_chooseName()}\n' + \
         f'topcolor {randint(0, 255)}\n' + \
-        f'bottomcolor {randint(0, 255)}'
+        f'bottomcolor {randint(0, 255)}\n' + \
+        f'alias nightvision ".nightvision {choice(COLORNAMES)}"'
 
     return (scfg, ccfg)
 

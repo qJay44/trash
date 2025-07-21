@@ -9,3 +9,4 @@ temp_*
 *.pkl
 colornames.txt
 sven-coop/hypixel-players.txt
+sven-coop/eframes*/

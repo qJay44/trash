@@ -363,6 +363,42 @@
         {
             "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 192\n.hat off\n.skin 0\n.color off\n.brapcolor 77 108 169",
             "ccfg": "model -agent_onna-_v2\nname THE_ARR0W\ntopcolor 113\nbottomcolor 109"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.brapcolor 156 5 123",
+            "ccfg": "model holo_baelz_lowpoly\nname \"been carved out\"\ntopcolor 110\nbottomcolor 205"
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.brapcolor 38 40 52",
+            "ccfg": "model 2d_hdn_blancv\nname _WidoGamer\ntopcolor 99\nbottomcolor 165"
+        },
+        {
+            "scfg": "exec clear.cfg\nsay trail babypoo lightning\n.vc voice scientist\n.vc pitch 171\n.hat off\n.skin 0\n.color off\n.brapcolor 150 146 55",
+            "ccfg": "model renamon2\nname \"Serbian Chess\"\ntopcolor 169\nbottomcolor 130\nalias nightvision \".nightvision rouge\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 221\n.hat deviltail\n.skin 0\n.color off\n.brapcolor 99 131 109",
+            "ccfg": "model songokussj\nname \"saints of\"\ntopcolor 37\nbottomcolor 226\nalias nightvision \".nightvision lightseafoamgreen\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.brapcolor 149 101 17",
+            "ccfg": "model lolsoraka\nname OhhMiroz\ntopcolor 159\nbottomcolor 33\nalias nightvision \".nightvision lightgreen2\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice csgoseparatist\n.vc pitch 100\n.hat kfcbucket\n.skin 0\n.color off\n.brapcolor 106 117 187",
+            "ccfg": "model mario64odyssey\nname wKoLoTa\ntopcolor 112\nbottomcolor 44\nalias nightvision \".nightvision rawsienna\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.brapcolor 90 136 220",
+            "ccfg": "model beast_v2\nname ah\ntopcolor 131\nbottomcolor 158\nalias nightvision \".nightvision vividgreen\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 47\n.hat off\n.skin 0\n.color off\n.brapcolor 247 192 247",
+            "ccfg": "model mikuhev_v2\nname Honorex590\ntopcolor 34\nbottomcolor 39\nalias nightvision \".nightvision grapepurple\""
+        },
+        {
+            "scfg": "exec clear.cfg\nsay trail verypalegreen thinline\n.vc voice scientist\n.vc pitch 85\n.hat santahat\n.skin 0\n.color off\n.brapcolor 216 15 145",
+            "ccfg": "model tails_s5\nname CammlyMan\ntopcolor 25\nbottomcolor 98\nalias nightvision \".nightvision teal\""
         }
     ]
 }
