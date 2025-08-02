@@ -1,3 +1,11 @@
+def chain(start, end):
+    cmd = 'alias chain1 ".e chain 1 loop'
+    for i in range(end - start + 1):
+        cmd += f" {i + start}"
+    cmd += '"'
+    print(cmd)
+
+
 def generate(num: int):
     cmds = f"alias _e_prev _e{num}; alias _e_next _e1\n\n"
     width = len(str(num))
@@ -14,4 +22,5 @@ def generate(num: int):
         f.write(cmds)
 
 if __name__ == '__main__':
-    generate(250)
+    # generate(250)
+    chain(242, 255)

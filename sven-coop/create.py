@@ -1,9 +1,8 @@
 from random import choice, randint
-from config import COLORNAMES, TRAIL_PALETTES, TRAIL_SPRITES, VC_NAMES, HATS, KING_CFG_PATH, MY_CFG_PATH
+from config import COLORNAMES, TRAIL_PALETTES, TRAIL_SPRITES, VC_VOICES, HATS, KING_CFG_PATH, MY_CFG_PATH
 import history
 import json
 import requests
-import re
 
 
 def create() -> tuple[str, str]:
@@ -12,8 +11,8 @@ def create() -> tuple[str, str]:
         'exec clear.cfg\n' + \
         roll(f'say trail {choice(COLORNAMES)} {choice(TRAIL_SPRITES)}\n') + \
         roll(f'.trail {choice(TRAIL_PALETTES)}\n') + \
-        f'.vc voice {roll(choice(VC_NAMES).name[:-7], 'scientist')}\n' + \
-        f'.vc pitch {roll(randint(1, 255), 100, 50)}\n' + \
+        f'.vc voice {choice(VC_VOICES)}\n' + \
+        f'.vc pitch {randint(50, 150)}\n' + \
         f'.hat {roll(choice(HATS), 'off', 25)}\n'  + \
         f'.skin {roll(-2, 0)}\n' + \
         f'.color {roll(choice(['r', 'g', 'b', 'y']), 'off')}\n' + \
@@ -32,8 +31,8 @@ def create() -> tuple[str, str]:
 
 def roll(winVal, loseVal: str | int ='', winTres=10):
     return winVal if randint(1, 100) < winTres else loseVal
-    
-    
+
+
 def _pick():
     with open('history.json', 'r', encoding='utf-8') as f:
         cfg = choice(json.load(f)['cfgs'])
@@ -53,34 +52,13 @@ def _fromWikipedia():
         name = name.replace('"', '')[:32]
 
         return f'\"{name}\"'
-        
- 
-def _fromBabelLib(hexagon_name_length=3200):
-    # https://github.com/victor-cortez/Library-of-Babel-Python-API/blob/master/pybel.py
-    
-    hexagon = "".join([choice("abcdefghijklmnopqrstuvwxyz0123456789") for i in range(hexagon_name_length)])
-    wall = str(randint(1, 4))
-    shelf = str(randint(1, 5))
-    volume = str(randint(1, 32))
-    
-    form = {"hex": hexagon,"wall": wall, "shelf": shelf, "volume": volume, "page": "1", "title": "startofthetext"}
-    url = "https://libraryofbabel.info/download.cgi"
-    text = requests.post(url, data=form)
-    content = text.text[len("startofthetext") + 2::].rsplit('\n', 4)[0]
-    
-    if "<HTML>" in content:
-        name = history.choose('names')
-    else:
-        name = choice(re.findall(r'\w+', content, re.MULTILINE))
-    
-    return name
 
 
 def _chooseName():
     if randint(1, 100) > 80:
         return history.choose('names')
     else:
-        return roll(_fromWikipedia(), _fromBabelLib(), 77)
+        return _fromWikipedia()
 
 
 def apply(scfg: str, ccfg: str, addToHistory: bool = True) -> None:
@@ -89,7 +67,7 @@ def apply(scfg: str, ccfg: str, addToHistory: bool = True) -> None:
 
     with open(MY_CFG_PATH, 'w', encoding='utf-8') as f:
         f.write(ccfg)
-    
+
     if (addToHistory):
         history.write(scfg, ccfg)
 
@@ -102,3 +80,4 @@ if __name__ == '__main__':
     print(f'{scfg}\n\n{ccfg}\n')
     print(f'models left: {history.length['models']}')
     print(f'names left: {history.length['names']}')
+

@@ -3,7 +3,7 @@ import re
 import pickle
 from random import choice
 
-from config import MODELS
+from config import getModels
 
 length = {'models': 0, 'names': 0}
 
@@ -13,7 +13,7 @@ def init() -> None:
     with open('history.json', 'r', encoding='utf-8') as f:
         history = json.load(f)['cfgs']
 
-    models = [m.name for m in MODELS]
+    models = [m.name for m in getModels()]
     names = (lambda: (f:=open('cs.pkl', 'rb'), pickle.load(f), f.close())[1])()
     names += (lambda: (f:=open('hypixel-players.pkl', 'rb'), pickle.load(f), f.close())[1])()
 
@@ -22,8 +22,20 @@ def init() -> None:
 
     for dop in history:
         cfg = dop['ccfg']
-        models.remove(re.search(r'(?<=model )(.+)', cfg).group())
-        names.remove(re.search(r'(?<=name )(.+)', cfg).group())
+
+        match = re.search(r'(?<=model )(.+)', cfg)
+        if (match):
+            models.remove(match.group())
+        else:
+            print(f'Cant find model [{cfg}]')
+            exit(1)
+
+        match = re.search(r'(?<=name )(.+)', cfg)
+        if (match):
+            names.remove(match.group())
+        else:
+            print(f'Cant find name [{cfg}]')
+            exit(1)
 
     with open('models.pkl', 'wb') as f:
         pickle.dump(models, f)
@@ -55,5 +67,6 @@ def write(scfg: str, ccfg:str) -> None:
 
 
 if __name__ == '__main__':
-    init()
+    ...
+    # init()
 

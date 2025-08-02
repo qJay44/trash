@@ -399,6 +399,98 @@
         {
             "scfg": "exec clear.cfg\nsay trail verypalegreen thinline\n.vc voice scientist\n.vc pitch 85\n.hat santahat\n.skin 0\n.color off\n.brapcolor 216 15 145",
             "ccfg": "model tails_s5\nname CammlyMan\ntopcolor 25\nbottomcolor 98\nalias nightvision \".nightvision teal\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.brapcolor 40 194 55",
+            "ccfg": "model dis_kate\nname \"employed the\"\ntopcolor 244\nbottomcolor 51\nalias nightvision \".nightvision palepurple\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.brapcolor 134 37 191",
+            "ccfg": "model soldier_commanderf_v2\nname loveisnotonfire\ntopcolor 108\nbottomcolor 179\nalias nightvision \".nightvision lichen\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.brapcolor 209 116 107",
+            "ccfg": "model wnt_miner\nname \"is\"\ntopcolor 15\nbottomcolor 64\nalias nightvision \".nightvision royal\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat off\n.skin 0\n.color off\n.brapcolor 51 255 14",
+            "ccfg": "model PaisanaJacinta\nname \"is a 2008\"\ntopcolor 105\nbottomcolor 177\nalias nightvision \".nightvision cadetblue\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 46\n.hat off\n.skin -2\n.color off\n.brapcolor 225 29 215",
+            "ccfg": "model angel_swat_balaclava\nname n\ntopcolor 241\nbottomcolor 133\nalias nightvision \".nightvision mutedblue\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 9\n.hat off\n.skin 0\n.color off\n.brapcolor 84 131 185",
+            "ccfg": "model ulala\nname Robertq999\ntopcolor 58\nbottomcolor 20\nalias nightvision \".nightvision greenapple\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 56\n.hat off\n.skin 0\n.color r\n.brapcolor 62 221 31",
+            "ccfg": "model general_v2\nname \"sports arena in\"\ntopcolor 141\nbottomcolor 79\nalias nightvision \".nightvision dustyred\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 76\n.hat off\n.skin 0\n.color off\n.brapcolor 117 27 65",
+            "ccfg": "model alien\nname \"4.50\"\ntopcolor 200\nbottomcolor 92\nalias nightvision \".nightvision orangeybrown\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 140\n.hat off\n.skin 0\n.color off\n.brapcolor 249 116 70",
+            "ccfg": "model military_police\nname \"Shingon-shu Buzan-ha sect,\"\ntopcolor 143\nbottomcolor 243\nalias nightvision \".nightvision puke\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 100\n.hat angel2\n.skin 0\n.color off\n.brapcolor 94 228 217",
+            "ccfg": "model coat\nname \"Pradesh, India, and\"\ntopcolor 166\nbottomcolor 39\nalias nightvision \".nightvision blueberry\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 144\n.hat off\n.skin 0\n.color off\n.brapcolor 163 109 92",
+            "ccfg": "model para_diversant1\nname \"March\"\ntopcolor 95\nbottomcolor 50\nalias nightvision \".nightvision lightmossgreen\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice scientist\n.vc pitch 84\n.hat off\n.skin 0\n.color off\n.brapcolor 214 7 23",
+            "ccfg": "model goth\nname \"Ch\u00e1vez, billed as\"\ntopcolor 96\nbottomcolor 235\nalias nightvision \".nightvision chocolatebrown\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice l4d_louis\n.vc pitch 62\n.hat off\n.skin 0\n.color off\n.brapcolor 61 165 106",
+            "ccfg": "model bb_security5\nname \"the\"\ntopcolor 40\nbottomcolor 75\nalias nightvision \".nightvision mustard\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice mason_maa\n.vc pitch 84\n.hat off\n.skin 0\n.color b\n.brapcolor 196 240 4",
+            "ccfg": "model whitesuit\nname Moongirl86\ntopcolor 56\nbottomcolor 161\nalias nightvision \".nightvision ocean\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice chadwarden\n.vc pitch 79\n.hat off\n.skin 0\n.color off\n.brapcolor 113 254 57",
+            "ccfg": "model thearm_v2\nname \"founded\"\ntopcolor 37\nbottomcolor 208\nalias nightvision \".nightvision bluegreen\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice soldier\n.vc pitch 89\n.hat off\n.skin 0\n.color off\n.brapcolor 93 77 225",
+            "ccfg": "model hunted\nname \"of\"\ntopcolor 81\nbottomcolor 58\nalias nightvision \".nightvision lighterpurple\""
+        },
+        {
+            "scfg": "exec clear.cfg\nsay trail cinnamon arrows\n.vc voice tf2medic\n.vc pitch 112\n.hat off\n.skin -2\n.color off\n.brapcolor 93 237 164",
+            "ccfg": "model scientist2_ld\nname Dylankm\ntopcolor 11\nbottomcolor 80\nalias nightvision \".nightvision tea\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.trail neonpunk\n.vc voice tf2scout\n.vc pitch 144\n.hat off\n.skin 0\n.color off\n.brapcolor 69 206 97",
+            "ccfg": "model miniblackgrunt\nname \"plays Edward Burne-Jones\"\ntopcolor 1\nbottomcolor 191\nalias nightvision \".nightvision straw\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice pd2_dallas\n.vc pitch 50\n.hat off\n.skin 0\n.color off\n.brapcolor 57 185 139",
+            "ccfg": "model touhou_inaba_tewi_v2\nname \"is a retired\"\ntopcolor 38\nbottomcolor 42\nalias nightvision \".nightvision strongblue\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice ba_nonomi\n.vc pitch 99\n.hat sumbraro2\n.skin 0\n.color off\n.brapcolor 47 167 254",
+            "ccfg": "model dgf_viola\nname \"sculptor.\"\ntopcolor 188\nbottomcolor 153\nalias nightvision \".nightvision sandstone\""
+        },
+        {
+            "scfg": "exec clear.cfg\nsay trail pureblue smokey\n.vc voice bodyguard\n.vc pitch 143\n.hat off\n.skin 0\n.color off\n.brapcolor 244 202 159",
+            "ccfg": "model zombie_deutsch_v2\nname DevinLeech\ntopcolor 118\nbottomcolor 241\nalias nightvision \".nightvision sunnyyellow\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice tf2medic\n.vc pitch 133\n.hat fox_hat_b\n.skin 0\n.color off\n.brapcolor 91 239 161",
+            "ccfg": "model mdn_tennouboshi_uzume\nname Deadstone8511\ntopcolor 58\nbottomcolor 126\nalias nightvision \".nightvision khakigreen\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice l4d_bill\n.vc pitch 115\n.hat off\n.skin 0\n.color off\n.brapcolor 255 72 118",
+            "ccfg": "model whitequbeley\nname \"Demons is\"\ntopcolor 171\nbottomcolor 6\nalias nightvision \".nightvision verypalegreen\""
         }
     ]
 }
