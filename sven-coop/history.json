@@ -491,6 +491,22 @@
         {
             "scfg": "exec clear.cfg\n.vc voice l4d_bill\n.vc pitch 115\n.hat off\n.skin 0\n.color off\n.brapcolor 255 72 118",
             "ccfg": "model whitequbeley\nname \"Demons is\"\ntopcolor 171\nbottomcolor 6\nalias nightvision \".nightvision verypalegreen\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.trail metro\n.vc voice ba_koyuki\n.vc pitch 69\n.hat off\n.skin 0\n.color off\n.brapcolor 251 16 14",
+            "ccfg": "model uk_ferryman\nname \"Jos\u00e9\"\ntopcolor 184\nbottomcolor 233\nalias nightvision \".nightvision pumpkinorange\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice agathaknight\n.vc pitch 67\n.hat off\n.skin -2\n.color off\n.brapcolor 10 198 184",
+            "ccfg": "model tf2_hhh\nname \"2013 New York\"\ntopcolor 24\nbottomcolor 97\nalias nightvision \".nightvision olivedrab\""
+        },
+        {
+            "scfg": "exec clear.cfg\nsay trail aquablue arrows\n.vc voice infantry\n.vc pitch 115\n.hat cattail\n.skin 0\n.color off\n.brapcolor 130 113 63",
+            "ccfg": "model op4_recon2_ld\nname \"president is co-founder\"\ntopcolor 239\nbottomcolor 241\nalias nightvision \".nightvision leather\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice counterstrikebot\n.vc pitch 97\n.hat off\n.skin 0\n.color off\n.brapcolor 197 252 121",
+            "ccfg": "model -babygirl-\nname \"known as Blue\"\ntopcolor 232\nbottomcolor 11\nalias nightvision \".nightvision lighturple\""
         }
     ]
 }
