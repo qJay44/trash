@@ -507,6 +507,114 @@
         {
             "scfg": "exec clear.cfg\n.vc voice counterstrikebot\n.vc pitch 97\n.hat off\n.skin 0\n.color off\n.brapcolor 197 252 121",
             "ccfg": "model -babygirl-\nname \"known as Blue\"\ntopcolor 232\nbottomcolor 11\nalias nightvision \".nightvision lighturple\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice tf2merasmus\n.vc pitch 123\n.hat off\n.skin 0\n.color off\n.brapcolor 85 179 163",
+            "ccfg": "model gf_m4a1_dark\nname \"Upper Palatinate,\"\ntopcolor 75\nbottomcolor 113\nalias nightvision \".nightvision darkred\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice hl_inugamikorone\n.vc pitch 76\n.hat off\n.skin 0\n.color off\n.brapcolor 243 63 193",
+            "ccfg": "model nva-strich1b\nname \"Indian music\"\ntopcolor 135\nbottomcolor 161\nalias nightvision \".nightvision orangishbrown\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice otis\n.vc pitch 120\n.hat off\n.skin 0\n.color off\n.brapcolor 69 67 94",
+            "ccfg": "model gignbig\nname \"travelled with him\"\ntopcolor 89\nbottomcolor 239\nalias nightvision \".nightvision brownishyellow\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice soldier\n.vc pitch 118\n.hat inosuke\n.skin 0\n.color off\n.brapcolor 100 184 251",
+            "ccfg": "model afterlife_robo_donor\nname HairPhils\ntopcolor 219\nbottomcolor 253\nalias nightvision \".nightvision royalpurple\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.trail anime\n.vc voice shocktrooper\n.vc pitch 69\n.hat off\n.skin 0\n.color g\n.brapcolor 23 226 181",
+            "ccfg": "model q3tf_spy\nname Lonestarranger7\ntopcolor 170\nbottomcolor 20\nalias nightvision \".nightvision maroon\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.trail neonpunk\n.vc voice ba_serika\n.vc pitch 57\n.hat off\n.skin 0\n.color off\n.brapcolor 126 25 150",
+            "ccfg": "model ksa_susie_broken\nname \"and J.R.\"\ntopcolor 46\nbottomcolor 37\nalias nightvision \".nightvision palemauve\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice nagatoro\n.vc pitch 113\n.hat off\n.skin 0\n.color off\n.brapcolor 119 20 160",
+            "ccfg": "model trollskipper_v2\nname \"Do\"\ntopcolor 106\nbottomcolor 116\nalias nightvision \".nightvision greenblue2\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice hl_uruharushia\n.vc pitch 89\n.hat off\n.skin 0\n.color r\n.brapcolor 42 67 84",
+            "ccfg": "model 2d_kc_ikazuchi\nname BlockBroSteve\ntopcolor 173\nbottomcolor 248\nalias nightvision \".nightvision pink\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice ba_moe\n.vc pitch 102\n.hat off\n.skin 0\n.color off\n.brapcolor 33 135 210",
+            "ccfg": "model lsd_doubleface_sexual\nname \"866, 2.6 miles\"\ntopcolor 231\nbottomcolor 3\nalias nightvision \".nightvision barney\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice salem\n.vc pitch 116\n.hat santahat\n.skin 0\n.color off\n.brapcolor 108 173 36",
+            "ccfg": "model gina2_v2\nname \"consists of Gep\"\ntopcolor 6\nbottomcolor 223\nalias nightvision \".nightvision vibrantgreen\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice hl_uruharushia\n.vc pitch 73\n.hat off\n.skin 0\n.color off\n.brapcolor 95 167 108",
+            "ccfg": "model qwtf_engineer_old\nname \"His\"\ntopcolor 86\nbottomcolor 237\nalias nightvision \".nightvision sunyellow\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.trail moss\n.vc voice pl_maeve\n.vc pitch 74\n.hat azusa_big\n.skin 0\n.color off\n.brapcolor 21 194 199",
+            "ccfg": "model sentokun\nname \"the\"\ntopcolor 133\nbottomcolor 166\nalias nightvision \".nightvision frenchblue\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice turklayf\n.vc pitch 115\n.hat mask\n.skin -2\n.color off\n.brapcolor 245 148 90",
+            "ccfg": "model kz_moeglados_v2\nname Cawl\ntopcolor 192\nbottomcolor 11\nalias nightvision \".nightvision brownishred\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice drcoomer\n.vc pitch 74\n.hat autism\n.skin 0\n.color off\n.brapcolor 241 120 22",
+            "ccfg": "model krauser_grunt\nname TheTiti16\ntopcolor 127\nbottomcolor 29\nalias nightvision \".nightvision pinkishbrown\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.trail beach\n.vc voice ba_moe\n.vc pitch 139\n.hat devil2\n.skin 0\n.color off\n.brapcolor 25 75 40",
+            "ccfg": "model cow-usa\nname Firelord777\ntopcolor 133\nbottomcolor 254\nalias nightvision \".nightvision reddishorange\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice vox\n.vc pitch 68\n.hat off\n.skin -2\n.color off\n.brapcolor 123 187 196",
+            "ccfg": "model reisen2\nname \"and stronger with\"\ntopcolor 118\nbottomcolor 65\nalias nightvision \".nightvision pukeyellow\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice ssh\n.vc pitch 101\n.hat off\n.skin 0\n.color off\n.brapcolor 178 0 137",
+            "ccfg": "model nekomata_mizugi_v2\nname \"of\"\ntopcolor 57\nbottomcolor 160\nalias nightvision \".nightvision warmblue\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice hl_inugamikorone\n.vc pitch 62\n.hat kermit_cap\n.skin 0\n.color off\n.brapcolor 203 143 96",
+            "ccfg": "model sas15\nname TheSexyUnicorn\ntopcolor 147\nbottomcolor 68\nalias nightvision \".nightvision rustbrown\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice bigboss\n.vc pitch 98\n.hat off\n.skin 0\n.color off\n.brapcolor 202 132 51",
+            "ccfg": "model KZ_Manuka_alt2\nname Micmical\ntopcolor 138\nbottomcolor 147\nalias nightvision \".nightvision terracotta\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice ba_chinatsu\n.vc pitch 59\n.hat elf\n.skin 0\n.color off\n.brapcolor 191 59 106",
+            "ccfg": "model ta_c_s_arctic2\nname \"is an\"\ntopcolor 56\nbottomcolor 30\nalias nightvision \".nightvision huntergreen\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice agathaknight\n.vc pitch 118\n.hat off\n.skin 0\n.color off\n.brapcolor 57 42 234",
+            "ccfg": "model zmfcheese\nname PyroMan_\ntopcolor 27\nbottomcolor 90\nalias nightvision \".nightvision lightteal\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice pl_raevemaeve\n.vc pitch 55\n.hat off\n.skin 0\n.color off\n.brapcolor 155 121 88",
+            "ccfg": "model shephardr\nname \"third sector railway\"\ntopcolor 187\nbottomcolor 176\nalias nightvision \".nightvision dirtygreen\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice al_ayanami\n.vc pitch 98\n.hat off\n.skin 0\n.color off\n.brapcolor 225 208 19",
+            "ccfg": "model blue1_mets\nname Cosmicderp2014\ntopcolor 231\nbottomcolor 232\nalias nightvision \".nightvision coolgreen\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice ba_hina\n.vc pitch 87\n.hat off\n.skin 0\n.color off\n.brapcolor 27 176 70",
+            "ccfg": "model dave\nname \"is an\"\ntopcolor 55\nbottomcolor 88\nalias nightvision \".nightvision poopgreen\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice ba_ayane\n.vc pitch 105\n.hat devilwing\n.skin 0\n.color b\n.brapcolor 37 151 16",
+            "ccfg": "model bdroid_hd\nname \"store occupied the\"\ntopcolor 201\nbottomcolor 70\nalias nightvision \".nightvision straw\""
+        },
+        {
+            "scfg": "exec clear.cfg\nsay trail lightburgundy voice\n.vc voice barney\n.vc pitch 122\n.hat off\n.skin 0\n.color off\n.brapcolor 244 169 142",
+            "ccfg": "model lt_kanna_urban\nname Azunadelemon16\ntopcolor 234\nbottomcolor 252\nalias nightvision \".nightvision purplishblue\""
+        },
+        {
+            "scfg": "exec clear.cfg\n.vc voice ellisl4d\n.vc pitch 133\n.hat off\n.skin 0\n.color off\n.brapcolor 185 244 207",
+            "ccfg": "model cyborg_ninja_heat\nname ThunderStriker77\ntopcolor 21\nbottomcolor 68\nalias nightvision \".nightvision brownyellow\""
         }
     ]
 }

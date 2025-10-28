@@ -6,3 +6,13 @@ connect STEAM_0:0:83567692
 
 .e 0 iloop 0.4 2 14
 .e 130 iloop 6 1 44
+
+// astolfo_lingerie
+.e 88 iloop 1 50 80 // hand
+.e 16 iloop 0.6 60 90 // suck (duck)
+.e 13 iloop 2 10 70 // stand
+.e 15 iloop 0.7 123 162 // lie
+
+// yorha_2b_scuttle_a2
+.e 197 loop 1 107 112
+.e 197 iloop 1 120 127

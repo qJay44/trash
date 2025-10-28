@@ -44,7 +44,7 @@ def init() -> None:
         pickle.dump(names, f)
 
 
-# @param: what Should be 'models' or 'names'
+# @param: what Should be either 'models' or 'names'
 def choose(what: str) -> str:
     with open(f'{what}.pkl', 'rb+') as f:
         wlist = pickle.load(f)
@@ -55,6 +55,19 @@ def choose(what: str) -> str:
         length[what] = len(wlist)
 
         return c
+
+
+# @param: toWhat Should be either 'models' or 'names'
+# @param: names A list of names
+def append(toWhat: str, names: list[str]) -> None:
+    with open(f'{toWhat}.pkl', 'rb+') as f:
+        wlist = pickle.load(f)
+        for name in names:
+            wlist.append(name)
+
+        f.seek(0)
+        pickle.dump(wlist, f)
+        length[toWhat] = len(wlist)
 
 
 # Saves cfgs to history.json
